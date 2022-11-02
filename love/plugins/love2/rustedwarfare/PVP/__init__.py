@@ -1,4 +1,4 @@
-from nonebot import on_keyword
+from nonebot import  on_command
 from nonebot.adapters.onebot.v11 import Bot, GroupMessageEvent
 import os
 
@@ -26,11 +26,11 @@ for x in range(len(tyt_2)):
 # 发送图片MessageSegment(pathlib.Path(fp))
 
 
-pvp = on_keyword(['跨群约战'], priority=50) # noqa
+pvp = on_command(cmd='跨群约战-', priority=50)
 # 使用handle装饰器
+# 约战系统重置
 @pvp.handle()
 async def handle_func(bot: Bot, event: GroupMessageEvent):
-
     txet_5 = str(event.get_session_id()).split('_', 2)
     txet_7 = txet_5[2]  # 获取QQ号
     qq_1 = open(FilePath(r'\rustedwarfare\PVP\_qq.txt'))
@@ -38,10 +38,13 @@ async def handle_func(bot: Bot, event: GroupMessageEvent):
     #将文件中的QQ导出为一个列表
     #在列表中进行遍历对证
     hang_2 = 0  #跑出列表有几个元素，然后根据元素数量确定循环次数
-    list_1=qq_1.readline()
+    list_1=qq_1.readlines()
+    print(list_1)
+    qq_1.close()
     for x in range(len(list_1)):
         hang_2 = hang_2 + 1
         return hang_2
+    print(hang_2)
     #这里可以试试使用对象
     qq_2=0
     while hang_2>0:

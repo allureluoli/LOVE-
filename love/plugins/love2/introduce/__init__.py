@@ -2,11 +2,14 @@ import json #带师傅
 import os
 from pathlib import Path #带师傅
 from typing import Union #带师傅
-from nonebot import on_fullmatch, on_message
+
+import goto
+from goto import with_goto
+from nonebot import on_fullmatch, on_message, on_command
 from nonebot.adapters.onebot.v11 import Event, GroupMessageEvent, message, event
 from nonebot.adapters.onebot.v11.bot import Bot, send
 
-introduce=on_fullmatch(['自我介绍','LOVE酱介绍'],priority=50)
+introduce=on_fullmatch(['自我介绍','LOVE酱介绍','@LOVE酱',],priority=50)
 @introduce.handle()
 async def handle_func(bot: Bot,event :Event):
     await introduce.finish('呐呐~我是love酱哒，一个为铁锈战争群聊提供服务的虚拟少女~试试对我说：【love酱功能】吧！')
@@ -16,10 +19,7 @@ function1=on_fullmatch(['love酱功能','LOVE酱功能'],priority=50)
 async def handle_func(bot: Bot,event :Event):
     await function1.finish('群聊代宣请加群\nLOVE酱的家：827472569\n查询命令：群聊查询、教程查询、单位查询（制作中）、地图查询（制作中）、模组查询（制作中）\n教程命令：LOVE酱铁锈教程\n联系作者：3345483363')
 
-start=on_fullmatch(['开启聊天系统'],priority=50)
-@start.handle()
-async def handle_func(bot: Bot,event :Event):
-    start_1 = 1
+
 #挖坑，制作专属回复
 LOVE=on_fullmatch(['LOVE','love','爱','LOVE酱','love酱','小宝贝'],priority=50)
 @LOVE.handle()
@@ -32,7 +32,7 @@ async def handle_func(bot: Bot,event :Event):
     h=3
     while h>0:
         h=h-1
-        list=['乖','不要一直Q6喔','你谈吐良好的样子更好哦']
+        list=['你谈吐良好的样子更好哦','不要一直Q6喔','乖']
         await six.send(list[h])
 
 
@@ -62,6 +62,8 @@ async def handle_func(bot: Bot,event :Event):
   await wife3.send("碳酸的")
 
 
+
+#废弃的类。效率太低
 class Dialogue:
     x=''
     m=''
@@ -92,37 +94,86 @@ def FilePath(FilePath_2):#拼接捏
     FilePath_2=FilePath_1+FilePath_2
     return FilePath_2
 
-i = 0
-FG_2 = []
-Fi_1 = open(FilePath(r'\introduce\cat.ini'))
-Fi_2 = Fi_1.readlines()
-for i in range(len(Fi_2)):
-    FG_1 = Fi_2[i].split("=")
-    FG_2.append(FG_1[0])
-    FG_2.append(FG_1[1])
-    i = i + 1
 
-zd_1 = {}
-i = 0
-while i<=175:
-    i = i + 2
-    zd_1[FG_2[i]]=FG_2[i+1]
+class wcnm:
+    i = 0
+    FG_2 = []
+    Fi_1 = open(FilePath(r'\introduce\cat.ini'),encoding='UTF-8')
+    Fi_2 = Fi_1.readlines()
 
+    for i in range(len(Fi_2)):
+        try:
+            FG_1 = Fi_2[i].split("=")
+            FG_2.append(FG_1[0])
+            FG_2.append(FG_1[1])
+            i = i + 1
 
-dialogue_1 = on_message(priority=20)
+        except:
+            print("又BUG了喵")
+    Fi_1.close()
+    zd_1 = {}
+    i = 0
+    while i<=400:
+        try:
+            i = i + 2
+            zd_1[FG_2[i]]=FG_2[i+1]
+        except:
+            print("失败了喵~~~")
+'''
+失败的方法
+    def zdcd(self):
+        i = 0
+        FG_2 = []
+        Fi_1 = open(FilePath(r'\introduce\cat.ini'), encoding='UTF-8')
+        Fi_2 = Fi_1.readlines()
+        Fi_1.close()
+        for i in range(len(Fi_2)):
+            FG_1 = Fi_2[i].split("=")
+            FG_2.append(FG_1[0])
+            FG_2.append(FG_1[1])
+            i = i + 1
+        zd_1 = {}
+        i = 0
+        while i <= 400:
+            try:
+                i = i + 2
+                zd_1[FG_2[i]] = FG_2[i + 1]
+            except:
+                print("失败了喵~~~")
+'''
+
+dialogue_1 = on_message(priority=100)
 @dialogue_1.handle() #出错
-async def handle_func(bot: Bot, event: GroupMessageEvent):
+async def handle_func(bot: Bot, event: GroupMessageEvent, ):
+    wcnm()
+    zd_1=wcnm.zd_1
     jsq = zd_1.get(str(event.get_message()))
     try:
         await dialogue_1.send(jsq)
     except:
         print("不行喵")
 
+#格式 LOVE教学-XX=XX
+#设置权限
+start=on_command(cmd='LOVE教学-',priority=50)
+@start.handle()
+async def handle_func(bot: Bot,event :Event):
+    try:
+        teaching=open(FilePath(r'\introduce\cat.ini'),'a+',encoding='UTF-8')
+        #分割消息
+        text = str(event.get_message()).split('-', 1)
+
+        teaching.write(str('\n'+text[1]))
+        teaching.close()
+        #import os
+        #os.system('exit',r'cd C:\Users\33454\Desktop\LOVE','nb run')
+        await start.send('呐呐呐！教学成功~\n(被添加的新回复将在次日审核通过后才可使用哦~)')
+    except:
+        teaching.close()
+        await start.send('教学失败，请检查命令格式')
 
 
-
-
-
+gy=['玉可碎 却不可改其白,竹可焚 而不可毁其节.身虽死 名可垂于竹帛也 又何惧哉.']
 #这种情况的话，是从字典第一个开始的吗？
 #解决方法应该是字典留空吧
 #先试试先
@@ -132,24 +183,7 @@ async def handle_func(bot: Bot, event: GroupMessageEvent):
 
 
 
-class Simplify:#简易
-    e_1=''  #接收词--等于机器人收到的纯文本消息
-    q=''   #发出词
-    def __init__(self,e_1):#规定形式参数
-        self.e_1 = e_1
-        dict_2={}
-        self.q = dict_2.get(self.e_1)
-        print(e_1)
-        #返回字典指定的键
-    def speak(self):
-        #他是怎么遍历确认相关的呢
-        #答案是get
-        #收到的消息拿去确认是否有字典！
-        #q确认有则事件响应机器触发，返回字典的键
-        str_1=self.e_1
 
-        #如何实现不通过事件响应器直接回消息呢
-        send(self.q)
 
 
 

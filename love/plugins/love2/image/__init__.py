@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from nonebot import on_keyword
+from nonebot import on_keyword, on_fullmatch
 from nonebot.adapters.onebot.v11 import MessageSegment, Event
 from nonebot.adapters.onebot.v11.bot import Bot
 
@@ -18,7 +18,7 @@ def FilePath(FilePath_2):#拼接捏
     FilePath_2=FilePath_1+FilePath_2
     return FilePath_2
 
-tu2=on_keyword(['MIKU','血月是个什么'],priority=50)
+tu2=on_fullmatch(['MIKU','血月是个什么','北音'],priority=50)
 @tu2.handle()
 async def handle_func(bot: Bot, event: Event):
     path = Path(FilePath(r"\rustedwarfare\PVP\MIKU.jpg")).parent / "MIKU.jpg"
@@ -26,7 +26,7 @@ async def handle_func(bot: Bot, event: Event):
     image = MessageSegment.image(path)
     await tu2.finish(image)
 
-tu2=on_keyword(['摆烂'],priority=50)
+tu2=on_fullmatch(['摆烂'],priority=50)
 @tu2.handle()
 async def handle_func(bot: Bot, event: Event):
     path = Path(FilePath(r"\image\摆烂.jpg")).parent / "摆烂.jpg"
@@ -35,7 +35,7 @@ async def handle_func(bot: Bot, event: Event):
     await tu2.finish(image)
 
 
-tu233 = on_keyword(['2333'], priority=50)
+tu233 = on_fullmatch(['2333'], priority=50)
 
 @tu233.handle()
 async def handle_func(bot: Bot, event: Event):
@@ -44,7 +44,7 @@ async def handle_func(bot: Bot, event: Event):
     await tu233.send(image)
 
 
-tu=on_keyword(['发图'],priority=50)
+tu=on_fullmatch(['测试。。。。发图'],priority=50)
 @tu.handle()
 async def handle_func(bot: Bot, event: Event):
 
@@ -52,4 +52,34 @@ async def handle_func(bot: Bot, event: Event):
 
     await tu.finish(image)
 
+tu3=on_fullmatch(['早','早安','安','中午好','晚上好','午安','晚安','半夜好','凌晨好','睡了'],priority=50)
+@tu3.handle()
+async def handle_func(bot: Bot, event: Event):
+    path = Path(FilePath(r"\image\好.jpg")).parent / "好.jpg"
+    # 构造图片消息段
+    image = MessageSegment.image(path)
+    await tu3.finish(image)
 
+tu5=on_fullmatch(['666','牛逼'],priority=50)
+@tu5.handle()
+async def handle_func(bot: Bot, event: Event):
+    path = Path(FilePath(r"\image\6.jpg")).parent / "6.jpg"
+    # 构造图片消息段
+    image = MessageSegment.image(path)
+    await tu5.finish(image)
+
+tu6=on_fullmatch(['???','？？？','什么情况'],priority=50)
+@tu6.handle()
+async def handle_func(bot: Bot, event: Event):
+    path = Path(FilePath(r"\image\2.jpg")).parent / "2.jpg"
+    # 构造图片消息段
+    image = MessageSegment.image(path)
+    await tu6.finish(image)
+
+tu7=on_fullmatch(['摸摸'],priority=50)
+@tu7.handle()
+async def handle_func(bot: Bot, event: Event):
+    path = Path(FilePath(r"\image\1.jpg")).parent / "1.jpg"
+    # 构造图片消息段
+    image = MessageSegment.image(path)
+    await tu7.finish(image)
