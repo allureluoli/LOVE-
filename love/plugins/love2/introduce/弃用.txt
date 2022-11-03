@@ -1,0 +1,85 @@
+import json #带师傅
+from pathlib import Path #带师傅
+from typing import Union #带师傅
+
+#废弃的类。效率太低
+class Dialogue:
+    x=''
+    m=''
+    #dialogue_1=''
+    def __init__(self,x,m):
+        self.x = x
+        self.m = m
+        #self.dialogue_1 =dialogue_1
+    def speak(self):
+        dialogue_1 = on_fullmatch([self.x], priority=50)
+        @dialogue_1.handle() #出错
+        async def handle_func(bot: Bot, event: Event):
+            await dialogue_1.send(self.m)
+
+
+'''
+失败的方法
+    def zdcd(self):
+        i = 0
+        FG_2 = []
+        Fi_1 = open(FilePath(r'\introduce\cat.ini'), encoding='UTF-8')
+        Fi_2 = Fi_1.readlines()
+        Fi_1.close()
+        for i in range(len(Fi_2)):
+            FG_1 = Fi_2[i].split("=")
+            FG_2.append(FG_1[0])
+            FG_2.append(FG_1[1])
+            i = i + 1
+        zd_1 = {}
+        i = 0
+        while i <= 400:
+            try:
+                i = i + 2
+                zd_1[FG_2[i]] = FG_2[i + 1]
+            except:
+                print("失败了喵~~~")
+'''
+
+#格式 LOVE教学-XX=XX
+#设置权限
+
+
+gy=['玉可碎 却不可改其白,竹可焚 而不可毁其节.身虽死 名可垂于竹帛也 又何惧哉.']
+#这种情况的话，是从字典第一个开始的吗？
+#解决方法应该是字典留空吧
+#先试试先
+
+'''
+class people:
+    #定义基本属性
+    name = ''
+    age = 0
+    #定义私有属性,私有属性在类外部无法直接进行访问
+    __weight = 0
+    #定义构造方法
+    def __init__(self,n,a,w):
+        self.name = n
+        self.age = a
+        self.__weight = w
+    def speak(self):
+        print("%s 说: 我 %d 岁。" %(self.name,self.age))
+
+# 实例化类
+p = people('runoob',10,30)
+p.speak()
+'''
+'''
+class MyClass:
+    """一个简单的类实例"""
+    i = 12345
+    def f(self):
+        return 'hello world'
+
+# 实例化类
+x = MyClass()
+
+# 访问类的属性和方法
+print("MyClass 类的属性 i 为：", x.i)
+print("MyClass 类的方法 f 输出为：", x.f())
+'''

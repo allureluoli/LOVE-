@@ -1,6 +1,9 @@
-import os
 from nonebot import on_fullmatch
 from nonebot.adapters.onebot.v11 import Bot, Event
+from importlib import reload
+import function
+from function import FilePath
+reload(function)#重新载入模块
 
 course=on_fullmatch(['LOVE酱铁锈教程','教程查询'],priority=50)
 @course.handle()
@@ -11,8 +14,6 @@ course=on_fullmatch(['导入教程'],priority=50)
 @course.handle()
 async def handle_func(bot: Bot,event :Event):
     await course.finish('呐呐！LOVE酱的教程命令：\n模组导入教程\n地图导入教程\n回放导入教程')
-
-
 
 course_1=on_fullmatch(['开房教程','联机教程'],priority=50)
 @course_1.handle()
@@ -55,17 +56,4 @@ async def handle_func(bot: Bot, event: Event):
     load_2 = wot2.read()
     await course_5.finish(load_2)
 
-def getRootPath():
-    # 获取文件目录
-    curPath = os.path.abspath(os.path.dirname(__file__))
-    # 获取项目根路径，内容为当前项目的名字
-    rootPath = curPath[:curPath.find('love2') + len('love2')]
-    return rootPath
-
-FilePath_1=str(getRootPath())
-
-print(FilePath_1)
-def FilePath(FilePath_2):#拼接捏
-    FilePath_2=FilePath_1+FilePath_2
-    return FilePath_2
 

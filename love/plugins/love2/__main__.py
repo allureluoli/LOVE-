@@ -1,4 +1,7 @@
-from .cli import main
+import os
 
 if __name__ == "__main__":
-    main()
+    print("作为主程序运行")
+else:
+    print('主程序运行失败')
+
