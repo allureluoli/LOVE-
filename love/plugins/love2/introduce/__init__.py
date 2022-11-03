@@ -1,20 +1,31 @@
 from importlib import reload
+
+from nonebot.rule import to_me
+
 import function
 from function import FilePath
 from nonebot import on_fullmatch, on_message, on_command
-from nonebot.adapters.onebot.v11 import Event, GroupMessageEvent, message, event
-from nonebot.adapters.onebot.v11.bot import Bot, send
+from nonebot.adapters.onebot.v11 import Event, GroupMessageEvent, event
+from nonebot.adapters.onebot.v11.bot import Bot
 
 reload(function)#重新载入模块
-introduce = on_fullmatch(['自我介绍', 'LOVE酱介绍', '@LOVE酱', ], priority=50)
+
+introduce_2 = on_fullmatch([''], rule=to_me(),priority=50)
+@introduce_2.handle()
+async def handle_func(bot: Bot, event: Event):
+
+
+    await introduce.finish('呐呐~我是love酱哒，一个为铁锈战争群聊提供服务的虚拟少女~试试对我说： love酱功能 吧！')
+
+introduce = on_fullmatch(['自我介绍', 'LOVE酱介绍', '@LOVE酱','maa'], priority=50)
 
 @introduce.handle()
 async def handle_func(bot: Bot, event: Event):
-    await introduce.finish('呐呐~我是love酱哒，一个为铁锈战争群聊提供服务的虚拟少女~试试对我说：【love酱功能】吧！')
 
+
+    await introduce.finish('呐呐~我是love酱哒，一个为铁锈战争群聊提供服务的虚拟少女~试试对我说： love酱功能 吧！')
 
 function1 = on_fullmatch(['love酱功能', 'LOVE酱功能'], priority=50)
-
 
 @function1.handle()
 async def handle_func(bot: Bot, event: Event):
@@ -42,9 +53,7 @@ async def handle_func(bot: Bot, event: Event):
         list = ['你谈吐良好的样子更好哦', '不要一直Q6喔', '乖']
         await six.send(list[h])
 
-
 pao = on_fullmatch(['。'], priority=50)
-
 
 @pao.handle()
 async def handle_func(bot: Bot, event: Event):
@@ -130,7 +139,7 @@ async def handle_func(bot: Bot, event: Event):
 dialogue_1 = on_message(priority=100)
 
 
-@dialogue_1.handle()  # 出错
+@dialogue_1.handle()
 async def handle_func(bot: Bot, event: GroupMessageEvent, ):
     wcnm()
     zd_1 = wcnm.zd_1
