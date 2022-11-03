@@ -1,8 +1,13 @@
+
+import sys
+
+sys.path.append(r'C:\Users\33454\Desktop\LOVE\src\plugins\love2')
 from nonebot import on_fullmatch
 from nonebot.adapters.onebot.v11 import Bot, Event
 from importlib import reload
 import function
 from function import FilePath
+
 reload(function)#重新载入模块
 
 course=on_fullmatch(['LOVE酱铁锈教程','教程查询'],priority=50)
