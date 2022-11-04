@@ -17,7 +17,6 @@ class Dialogue:
         async def handle_func(bot: Bot, event: Event):
             await dialogue_1.send(self.m)
 
-
 '''
 失败的方法
     def zdcd(self):
@@ -83,3 +82,71 @@ x = MyClass()
 print("MyClass 类的属性 i 为：", x.i)
 print("MyClass 类的方法 f 输出为：", x.f())
 '''
+
+#reaction1=on_fullmatch(['Lolita'],priority=1)
+#reaction1.handle()
+#async def handle_func(bot: Bot, event: Event):
+#    #把图片路径构造成一个列表
+#    j = 4
+#    while j > 0:
+'''`
+        j = j - 1
+
+        list_1 = [r'\C:\Users\ASUS\Desktop\bot\mjrobot\mjrobot\plugins\响应\Localemoji\reactionemoji\2DLolita1.png', '（怎么啦）', '（在呢）', '（嗯嗯）']
+        list_2=['2DLolita1.png','','','']
+        if j > 1:
+            await reaction1.send(list_1[j])
+        else:
+            path = Path(FilePath(list_1[j])).parent / list_2[j]
+            image = MessageSegment.image(path)
+            await reaction1.send(image)
+
+'''
+
+
+
+
+
+
+'''
+weather = on_command(cmd="weather", aliases={"傻逼", "天气预报"}, priority=5)
+
+
+@weather.handle()
+async def handle_first_receive(matcher: Matcher, args: Message = CommandArg()):
+    plain_text = args.extract_plain_text()  # 首次发送命令时跟随的参数，例：/天气 上海，则args为上海
+    if plain_text:
+        matcher.set_arg("city", args)  # 如果用户发送了参数则直接赋值
+
+
+@weather.got("city", prompt="你想查询哪个城市的傻逼呢？")
+async def handle_city(city: Message = Arg(), city_name: str = ArgPlainText("city")):
+    if city_name not in ["淄博", "魔法少女"]:  # 如果参数不符合要求，则提示用户重新输入
+        # 可以使用平台的 Message 类直接构造模板消息
+        await weather.reject(city.template("你想查询的傻逼 {city} 暂不支持，请重新输入！"))
+
+    city_weather = await get_weather(city_name)
+    await weather.finish(city_weather)
+
+# 在这里编写获取天气信息的函数
+async def get_weather(city: str) -> str:
+    return f"{city}的傻逼是老琪"
+'''
+
+
+
+'''
+master=on_keyword(['6'],priority=50)
+@master.handle()
+async def handle_func(bot: Bot,event :Event):
+      hang = 0
+      while hang > 0:
+            hang = hang - 1
+
+            txt_1 = open(str(FilePath(r'\6.txt')), encoding='UTF-8')
+            a1 = txt_1.readline()
+            a2 = hang-1
+            await master.finish(a1[a2])
+'''
+
+

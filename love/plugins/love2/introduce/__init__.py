@@ -42,6 +42,8 @@ async def handle_func(bot: Bot, event: Event):
     await LOVE.finish('呐呐呐？是在叫我嘛~')
 
 
+
+
 six = on_fullmatch(['6'], priority=50)
 
 

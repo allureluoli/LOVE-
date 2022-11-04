@@ -1,25 +1,6 @@
 import pytest
 from nonebug import App
 
-#reaction1=on_fullmatch(['Lolita'],priority=1)
-#reaction1.handle()
-#async def handle_func(bot: Bot, event: Event):
-#    #把图片路径构造成一个列表
-#    j = 4
-#    while j > 0:
-'''`
-        j = j - 1
-
-        list_1 = [r'\C:\Users\ASUS\Desktop\bot\mjrobot\mjrobot\plugins\响应\Localemoji\reactionemoji\2DLolita1.png', '（怎么啦）', '（在呢）', '（嗯嗯）']
-        list_2=['2DLolita1.png','','','']
-        if j > 1:
-            await reaction1.send(list_1[j])
-        else:
-            path = Path(FilePath(list_1[j])).parent / list_2[j]
-            image = MessageSegment.image(path)
-            await reaction1.send(image)
-
-'''
 
 @pytest.mark.asyncio
 async def test_pvp(app: App, load_example):
