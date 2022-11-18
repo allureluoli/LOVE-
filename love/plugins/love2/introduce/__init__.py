@@ -30,7 +30,7 @@ function1 = on_fullmatch(['love酱功能', 'LOVE酱功能'], priority=50)
 @function1.handle()
 async def handle_func(bot: Bot, event: Event):
     await function1.finish(
-        '群聊代宣请加群\nLOVE酱的家：827472569\n查询命令：群聊查询、教程查询、单位查询（制作中）、地图查询（制作中）、模组查询（制作中）\n教程命令：LOVE酱铁锈教程\n联系作者：3345483363')
+        '群聊代宣请加群\nLOVE酱的家：827472569\n获取房间列表\n查询命令：群聊查询、教程查询、单位查询（制作中）、地图查询（制作中）、模组查询（制作中）\n教程命令：LOVE酱铁锈教程\n联系作者：3345483363')
 
 
 # 挖坑，制作专属回复
