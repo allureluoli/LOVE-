@@ -147,7 +147,8 @@ async def handle_func(bot: Bot, event: GroupMessageEvent, ):
     zd_1 = wcnm.zd_1
     jsq = zd_1.get(str(event.get_message()))
     try:
-        await dialogue_1.send(jsq)
+        jsq_2=jsq.replace("\n","")
+        await dialogue_1.send(jsq_2)
 
     except:
         print("不行喵")

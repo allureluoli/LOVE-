@@ -24,11 +24,10 @@ def home_list(game_list):
         response = request.urlopen(req)
         zfc1=response.read()
         soup = BeautifulSoup(zfc1,"html.parser")
-        soup_2=soup.find_all("td","created")
-        soup_3=soup.find_all("td","map")
+
         soup_4=soup.find_all("tr")
         Soup_4= BeautifulSoup(str(soup_4),"html.parser")
-        list_1 =Soup_4.get_text()
+        list_1 =Soup_4.get_text().replace('battleroom' , '【联机房】').replace('Public' , ' V:').replace('Private' , ' V:')
         wtm =list_1.split(",")
         game_list = ""
         for i in wtm[1:40]:

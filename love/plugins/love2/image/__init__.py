@@ -1,6 +1,8 @@
+import random
+from datetime import date
 from pathlib import Path
-from nonebot import  on_fullmatch
-from nonebot.adapters.onebot.v11 import MessageSegment, Event
+from nonebot import  on_fullmatch,on_command
+from nonebot.adapters.onebot.v11 import MessageSegment, Event, event, GroupMessageEvent
 from nonebot.adapters.onebot.v11.bot import Bot
 from importlib import reload
 import function
@@ -33,13 +35,71 @@ async def handle_func(bot: Bot, event: Event):
     await tu233.send(image)
 
 
-tu=on_fullmatch(['测试。。。。发图'],priority=50)
+tu=on_fullmatch(['英灵召唤'],priority=50)
 @tu.handle()
 async def handle_func(bot: Bot, event: Event):
+    rnd = random.Random()
+    lucknum = rnd.randint(1, 367)
 
-    image = MessageSegment.image("https://i2.hdslb.com/bfs/face/be662100c1a783026930891c43d64e36b3ddab16.jpg")
-
+    if lucknum >= 100:
+        wtm="http://fgo-cdn.vgtime.com/media/fgo/servant/card/" + str(lucknum) + "A.png"
+    elif lucknum >= 10:
+        wtm="http://fgo-cdn.vgtime.com/media/fgo/servant/card/0" + str(lucknum) + "A.png"
+    else:
+        wtm="http://fgo-cdn.vgtime.com/media/fgo/servant/card/00" + str(lucknum) + "A.png"
+    image = MessageSegment.image(wtm)
     await tu.finish(image)
+
+tu_2=on_fullmatch(['FGO十连'],priority=50)
+@tu_2.handle()
+async def handle_func(bot: Bot, event: Event):
+    cxk=0
+    imageend = ""
+    while cxk <10:
+        one_star = [341, 294, 259, 257, 254, 174, 53, 50, 45, 39, 36, 16, 107]
+        two_star = [260, 258, 256, 255, 57, 54, 44, 43, 40, 34, 33, 25, 24, 21, 19]
+        three_star = [7, 9, 13, 15, 17, 20, 22, 23, 26, 27, 28, 31, 32, 35, 38, 42, 49, 55, 56, 63, 64, 71, 72, 79, 80,
+                      81, 95, 104, 105, 110, 117, 124, 125, 126, 148, 172, 186, 203, 204, 210, 231, 246, 249, 251, 273,
+                      348, 352]
+
+        cxk +=1
+        rnd3 = random.Random()
+        lucknum3 = rnd3.randint(1, 100)
+        if lucknum3 <=45:
+            rnd3 = random.Random()
+            x = rnd3.randint(1, 12)
+            lucknum=one_star[x]
+        elif lucknum3 <=75:
+            rnd3 = random.Random()
+            x = rnd3.randint(1, 14)
+            lucknum = two_star[x]
+        elif lucknum3 <= 95:
+            rnd3 = random.Random()
+            x = rnd3.randint(1, 46)
+            lucknum = three_star[x]
+        else:
+            rnd2 = random.Random()
+            lucknum = rnd2.randint(1, 367)
+
+        #一星爆率50 二星爆率30 三星爆率25 剩下百分之五去好池子里面抽
+
+        if lucknum >= 100:
+            wtm = "http://fgo-cdn.vgtime.com/media/fgo/servant/head/" + str(lucknum) + ".jpg"
+        elif lucknum >= 10:
+            wtm = "http://fgo-cdn.vgtime.com/media/fgo/servant/head/0" + str(lucknum) + ".jpg"
+        else:
+            wtm = "http://fgo-cdn.vgtime.com/media/fgo/servant/head/00" + str(lucknum) + ".jpg"
+
+        image = MessageSegment.image(wtm)
+        imageend += image
+
+    await tu_2.send(imageend)
+
+
+
+
+    #他欧了
+
 
 tu3=on_fullmatch(['早','早安','安','中午好','晚上好','午安','晚安','半夜好','凌晨好','睡了'],priority=50)
 @tu3.handle()
@@ -72,3 +132,20 @@ async def handle_func(bot: Bot, event: Event):
     # 构造图片消息段
     image = MessageSegment.image(path)
     await tu7.finish(image)
+
+
+jrrp=on_command('今日抽签',priority=50)
+@jrrp.handle()
+async def handle_func(bot: Bot, event: GroupMessageEvent):
+    txet_5 = str(event.get_session_id()).split('_', 2)
+    txet_7 = txet_5[2]
+    rnd = random.Random()
+    rnd.seed(int(date.today().strftime("%y%m%d")) + int(txet_7))
+    lucknum = rnd.randint(1, 7)
+    zfcc = str(lucknum)+".jpg"
+    path = Path(FilePath("\\data\\"+str(lucknum)+".jpg"))
+    print(path)
+    # 构造图片消息段
+    image = MessageSegment.image(path)
+    await jrrp.finish(image)
+

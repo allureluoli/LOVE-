@@ -10,7 +10,7 @@ from function import FilePath
 
 reload(function)#重新载入模块
 
-course=on_fullmatch(['LOVE酱铁锈教程','教程查询'],priority=50)
+course=on_fullmatch(['LOVE酱铁锈教程','教程查询',"love酱铁锈教程"],priority=50)
 @course.handle()
 async def handle_func(bot: Bot,event :Event):
     await course.finish('呐呐！LOVE酱的教程命令：\n联机教程\n导入教程\n铁锈操作教程\n制作教程\n房间指令教程')
@@ -54,11 +54,5 @@ async def handle_func(bot: Bot, event: Event):
     load_5 = wot5.read()
     await course_5.finish(load_5)
 
-course_2=on_fullmatch(['模组导入教程'],priority=50)
-@course_2.handle()
-async def handle_func(bot: Bot, event: Event):
-    wot2 = open(str(FilePath(r'\rustedwarfare\help\mod_course.txt')), encoding='UTF-8')
-    load_2 = wot2.read()
-    await course_5.finish(load_2)
 
 
