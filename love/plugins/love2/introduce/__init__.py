@@ -1,14 +1,10 @@
-from importlib import reload
-
 from nonebot.rule import to_me
-
-import function
-from function import FilePath
+from ..function import FilePath
 from nonebot import on_fullmatch, on_message, on_command
 from nonebot.adapters.onebot.v11 import Event, GroupMessageEvent, event
 from nonebot.adapters.onebot.v11.bot import Bot
 
-reload(function)#重新载入模块
+
 
 introduce_2 = on_fullmatch([''], rule=to_me(),priority=50)
 @introduce_2.handle()
@@ -96,7 +92,7 @@ async def handle_func(bot: Bot, event: Event):
 class wcnm:
     i = 0
     FG_2 = []
-    Fi_1 = open(FilePath(r'\introduce\cat.ini'), encoding='UTF-8')
+    Fi_1 = open(FilePath(r'/introduce/cat.ini'), encoding='UTF-8')
     Fi_2 = Fi_1.readlines()
 
     for i in range(len(Fi_2)):
@@ -125,7 +121,7 @@ start = on_command(cmd='LOVE教学-', priority=20)
 @start.handle()
 async def handle_func(bot: Bot, event: Event):
     try:
-        teaching = open(FilePath(r'\introduce\cat.ini'), 'a+', encoding='UTF-8')
+        teaching = open(FilePath(r'/introduce/cat.ini'), 'a+', encoding='UTF-8')
         # 分割消息
         text = str(event.get_message()).split('-', 1)
         teaching.write(str('\n' + text[1]))

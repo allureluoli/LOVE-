@@ -4,15 +4,13 @@ from pathlib import Path
 from nonebot import  on_fullmatch,on_command
 from nonebot.adapters.onebot.v11 import MessageSegment, Event, event, GroupMessageEvent
 from nonebot.adapters.onebot.v11.bot import Bot
-from importlib import reload
-import function
-from function import FilePath
-reload(function)#重新载入模块
+from ..function import FilePath
+
 
 tu2=on_fullmatch(['MIKU','血月是个什么','北音'],priority=50)
 @tu2.handle()
 async def handle_func(bot: Bot, event: Event):
-    path = Path(FilePath(r"\rustedwarfare\PVP\MIKU.jpg")).parent / "MIKU.jpg"
+    path = Path(FilePath(r"/rustedwarfare/PVP/MIKU.jpg")).parent / "MIKU.jpg"
     # 构造图片消息段
     image = MessageSegment.image(path)
     await tu2.finish(image)
@@ -20,7 +18,7 @@ async def handle_func(bot: Bot, event: Event):
 tu2=on_fullmatch(['摆烂'],priority=50)
 @tu2.handle()
 async def handle_func(bot: Bot, event: Event):
-    path = Path(FilePath(r"\image\摆烂.jpg")).parent / "摆烂.jpg"
+    path = Path(FilePath(r"/image/摆烂.jpg")).parent / "摆烂.jpg"
     # 构造图片消息段
     image = MessageSegment.image(path)
     await tu2.finish(image)
@@ -145,7 +143,7 @@ txztj = on_fullmatch(['铁锈抓兔机'], priority=50)
 
 @txztj.handle()
 async def handle_func(bot: Bot, event: Event):
-    File_1=open(FilePath(r"\data\铁锈单位.txt"),encoding="UTF-8")
+    File_1=open(FilePath(r"/data/铁锈单位.txt"),encoding="UTF-8")
     list_1=File_1.read().replace("\n","").split("→")
     rnd3 = random.Random()
     x = rnd3.randint(0, 200)
@@ -158,7 +156,7 @@ txztj2 = on_fullmatch(['战队抓兔机'], priority=50)
 
 @txztj2.handle()
 async def handle_func(bot: Bot, event: Event):
-    File_1=open(FilePath(r"\data\铁锈单位2.txt"),encoding="UTF-8")
+    File_1=open(FilePath(r"/data/铁锈单位2.txt"),encoding="UTF-8")
     list_1=File_1.read().replace("\n","").split("→")
     rnd3 = random.Random()
     x = rnd3.randint(0, 250)
@@ -173,7 +171,7 @@ async def handle_func(bot: Bot, event: Event):
 tu3=on_fullmatch(['早','早安','安','中午好','晚上好','午安','晚安','半夜好','凌晨好','睡了'],priority=50)
 @tu3.handle()
 async def handle_func(bot: Bot, event: Event):
-    path = Path(FilePath(r"\image\好.jpg")).parent / "好.jpg"
+    path = Path(FilePath(r"/image/好.jpg")).parent / "好.jpg"
     # 构造图片消息段
     image = MessageSegment.image(path)
     await tu3.finish(image)
@@ -181,7 +179,7 @@ async def handle_func(bot: Bot, event: Event):
 tu5=on_fullmatch(['666','牛逼'],priority=50)
 @tu5.handle()
 async def handle_func(bot: Bot, event: Event):
-    path = Path(FilePath(r"\image\6.jpg")).parent / "6.jpg"
+    path = Path(FilePath(r"/image/6.jpg")).parent / "6.jpg"
     # 构造图片消息段
     image = MessageSegment.image(path)
     await tu5.finish(image)
@@ -189,7 +187,7 @@ async def handle_func(bot: Bot, event: Event):
 tu6=on_fullmatch(['???','？？？','什么情况'],priority=50)
 @tu6.handle()
 async def handle_func(bot: Bot, event: Event):
-    path = Path(FilePath(r"\image\2.jpg")).parent / "2.jpg"
+    path = Path(FilePath(r"/image/2.jpg")).parent / "2.jpg"
     # 构造图片消息段
     image = MessageSegment.image(path)
     await tu6.finish(image)
@@ -197,7 +195,7 @@ async def handle_func(bot: Bot, event: Event):
 tu7=on_fullmatch(['摸摸'],priority=50)
 @tu7.handle()
 async def handle_func(bot: Bot, event: Event):
-    path = Path(FilePath(r"\image\1.jpg")).parent / "1.jpg"
+    path = Path(FilePath(r"/image/1.jpg")).parent / "1.jpg"
     # 构造图片消息段
     image = MessageSegment.image(path)
     await tu7.finish(image)
@@ -205,7 +203,7 @@ async def handle_func(bot: Bot, event: Event):
 read_book=on_fullmatch(['看书','读书'],priority=50)
 @read_book.handle()
 async def handle_func(bot: Bot, event: Event):
-    path = Path(FilePath(r"\data\read_book.jpg")).parent / "read_book.jpg"
+    path = Path(FilePath("/data/read_book.jpg")).parent / "read_book.jpg"
     # 构造图片消息段
     image = MessageSegment.image(path)
     await read_book.finish(image)
@@ -219,7 +217,7 @@ async def handle_func(bot: Bot, event: GroupMessageEvent):
     rnd.seed(int(date.today().strftime("%y%m%d")) + int(txet_7))
     lucknum = rnd.randint(1, 7)
     zfcc = str(lucknum)+".jpg"
-    path = Path(FilePath("\\data\\"+str(lucknum)+".jpg"))
+    path = Path(FilePath("//data//"+str(lucknum)+".jpg"))
     print(path)
     # 构造图片消息段
     image = MessageSegment.image(path)

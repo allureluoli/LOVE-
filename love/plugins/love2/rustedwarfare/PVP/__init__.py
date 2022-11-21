@@ -1,13 +1,11 @@
 from nonebot import  on_command
 from nonebot.adapters.onebot.v11 import Bot, GroupMessageEvent
-from importlib import reload
-import function
-from function import FilePath
-reload(function)#重新载入模块
+from ..function import FilePath
 
 
 
-tyt_1 = open(str(FilePath(r'\rustedwarfare\rw\group_id.txt')), encoding='UTF-8')
+
+tyt_1 = open(str(FilePath(r'/rustedwarfare/rw/group_id.txt')), encoding='UTF-8')
 tyt_2 =tyt_1.readlines()
 hang=0
 for x in range(len(tyt_2)):
@@ -23,7 +21,7 @@ pvp = on_command(cmd='跨群约战-', priority=50)
 async def handle_func(bot: Bot, event: GroupMessageEvent):
     txet_5 = str(event.get_session_id()).split('_', 2)
     txet_7 = txet_5[2]  # 获取QQ号
-    qq_1 = open(FilePath(r'\rustedwarfare\PVP\_qq.txt'))
+    qq_1 = open(FilePath(r'/rustedwarfare/PVP/_qq.txt'))
     #在这里开始检查
     #将文件中的QQ导出为一个列表
     #在列表中进行遍历对证
@@ -48,12 +46,12 @@ async def handle_func(bot: Bot, event: GroupMessageEvent):
         await pvp.finish("你已经进行过约战了哦~")
     #发现已经进行过约战-直接跳出循环
     #使用with打开文件试试？
-    qq_1=open(FilePath(r'\rustedwarfare\PVP\_qq.txt'),mode = '+')
+    qq_1=open(FilePath(r'/rustedwarfare/PVP/_qq.txt'),mode = '+')
     qq_1.write(str(txet_7))
     qq_1.close()
     ##提前检查其中是否有QQ号
     #QQ号写入文件，然后定时删除QQ
-    gossip_text = open(str(FilePath(r'\rustedwarfare\rw\group_id.txt')), encoding='UTF-8')
+    gossip_text = open(str(FilePath(r'/rustedwarfare/rw/group_id.txt')), encoding='UTF-8')
     tyt_2 = gossip_text.readlines()
     hang = 0
     for x in range(len(tyt_2)):
@@ -75,9 +73,9 @@ async def handle_func(bot: Bot, event: GroupMessageEvent):
             str_3=str(" 的用户发起了对战邀请。\n房间号："+str(txet_4))
             text_8=str(str_1+str_2+str_3)
                 #后期再加昵称吧
-            gossip_text = open(str(FilePath(r'\rustedwarfare\rw\gossip.txt')), encoding='UTF-8')
+            gossip_text = open(str(FilePath(r'/rustedwarfare/rw/gossip.txt')), encoding='UTF-8')
             a1=gossip_text.readline()
-            tyt_1 = open(str(FilePath(r'\rustedwarfare\rw\group_id.txt')), encoding='UTF-8')
+            tyt_1 = open(str(FilePath(r'/rustedwarfare/rw/group_id.txt')), encoding='UTF-8')
             tyt_2 = tyt_1.readlines()
             s=hang-1
             group_id = tyt_2[s] #群的id

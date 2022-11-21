@@ -1,11 +1,8 @@
-from importlib import reload
-import function
-from function import FilePath
+from ..function import FilePath
 from pathlib import Path
 from nonebot import on_fullmatch
 from nonebot.adapters.onebot.v11 import Event, MessageSegment
 from nonebot.adapters.onebot.v11.bot import  Bot
-reload(function)#重新载入模块
 
 
 tu3=on_fullmatch(['测试-加文字'],priority=50)
