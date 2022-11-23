@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "LOVE"
+name = "love"
 version = "0.1.0"
-description = "LOVE"
+description = "love"
 authors = []
 readme = "README.md"
 
@@ -13,8 +13,8 @@ nonebot2 = "^2.0.0-beta.1"
 nb-cli = "^0.6.0"
 
 [tool.nonebot]
-plugins = []
-plugin_dirs = ["love/plugins"]
+plugins = ["nonebot_plugin_apscheduler"]
+plugin_dirs = ["src/plugins"]
 
 [build-system]
 requires = ["poetry_core>=1.0.0"]

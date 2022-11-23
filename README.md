@@ -1,14 +1,12 @@
-# LOVE-
+# love
 
-## 呐呐呐 ，这里是LOVE酱哦
+## How to start
 
-## 使用方法：
+1. generate project using `nb create` .
+2. create your plugin using `nb plugin create` .
+3. writing your plugins under `src/plugins` folder.
+4. run your bot using `nb run` .
 
-	- 发送 自我介绍 即可得到回复
-	- 查询房间列表
-	- 战队查询
-	- 跨群对战-房间号
+## Documentation
 
-## 教学：
-
-	- LOVE教学-你的发送词=你想得到的回复词
+See [Docs](https://v2.nonebot.dev/)
