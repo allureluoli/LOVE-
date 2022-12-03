@@ -1,7 +1,7 @@
 from ..function import FilePath
 from pathlib import Path
-from nonebot import on_fullmatch
-from nonebot.adapters.onebot.v11 import Event, MessageSegment
+from nonebot import on_fullmatch, on_command
+from nonebot.adapters.onebot.v11 import Event, MessageSegment, GroupMessageEvent
 from nonebot.adapters.onebot.v11.bot import  Bot
 
 
@@ -22,3 +22,34 @@ async def handle_func(bot: Bot, event: Event):
             await tu3.send(image)
 
         #构造图片消息段
+
+#小型转发模块测试
+pvp = on_command(cmd='最高权限-开始群发--测试', priority=50)
+
+@pvp.handle()
+
+async def handle_func(bot: Bot, event: GroupMessageEvent):
+
+    tyt_1 = open(str(FilePath(r'/function/group_id.txt')), encoding='UTF-8')
+    tyt_2 = tyt_1.readlines()
+
+    hang = 0
+    for x in range(len(tyt_2)):
+        hang = hang + 1
+
+    #内置循环
+    while hang > 0:#循环32次
+            hang = hang - 1
+
+
+    tyt_1 = open(str(FilePath(r'/function/group_id.txt')), encoding='UTF-8')
+    tyt_2 = tyt_1.readlines()
+    tyt_1.close()
+    s = hang - 1
+    group_id = tyt_2[s]
+
+    wot2 = open(str(FilePath(r'/function/xuanchuan.txt')), encoding='UTF-8')
+    text = wot2.read()
+    wot2.close()
+
+    await pvp.send(group_id=int(group_id), message=text, auto_escape=False)

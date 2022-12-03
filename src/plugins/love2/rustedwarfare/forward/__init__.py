@@ -12,28 +12,32 @@ from ..function import FilePath
 pvp = on_command(cmd='最高权限-开始群发--阿巴阿巴', priority=50)
 
 @pvp.handle()
+
+
+
 async def handle_func(bot: Bot, event: GroupMessageEvent):
+
+    #读取有多少行
     tyt_1 = open(str(FilePath(r'/rustedwarfare/rw/group_id.txt')), encoding='UTF-8')
     tyt_2 = tyt_1.readlines()
 
     hang = 0
     for x in range(len(tyt_2)):
         hang = hang + 1
-    #读取有多少行
-
+    hang=32
     #内置循环
     while hang > 0:#循环32次
-            hang = hang - 1
+        hang = hang - 1
 
 
-    tyt_1 = open(str(FilePath(r'/rustedwarfare/rw/group_id.txt')), encoding='UTF-8')
-    tyt_2 = tyt_1.readlines()
-    tyt_1.close()
-    s = hang - 1
-    group_id = tyt_2[s]
+        tyt_1 = open(str(FilePath(r'/rustedwarfare/rw/group_id.txt')), encoding='UTF-8')
+        tyt_2 = tyt_1.readlines()
+        tyt_1.close()
+        s = hang - 1
+        group_id = tyt_2[s]
 
-    wot2 = open(str(FilePath(r'/rustedwarfare/help/xuanchaun.txt')), encoding='UTF-8')
-    text = wot2.read()
-    wot2.close()
+        wot2 = open(str(FilePath(r'/rustedwarfare/help/xuanchaun.txt')), encoding='UTF-8')
+        text = wot2.read()
+        wot2.close()
 
-    await pvp.send(group_id=int(group_id), message=text, auto_escape=False)
+        await pvp.send(group_id=int(group_id), message=text, auto_escape=False)
