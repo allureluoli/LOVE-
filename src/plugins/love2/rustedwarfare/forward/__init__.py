@@ -42,9 +42,10 @@ async def handle_func(bot: Bot, event: GroupMessageEvent):
         wot2 = open(str(FilePath(r'/rustedwarfare/help/xuanchaun.txt')), encoding='UTF-8')
         text = wot2.read()
         wot2.close()
-
-        await pvp.send(group_id=int(group_id), message=text, auto_escape=False)
-
+        try:
+            await pvp.send(group_id=int(group_id), message=text, auto_escape=False)
+        except:
+            await pvp.send(group_id+'发送失败')
 
 
 #开始写骰子(
