@@ -29,7 +29,9 @@ pvp = on_command(cmd='最高权限-开始群发--测试', priority=50)
 @pvp.handle()
 
 async def handle_func(bot: Bot, event: GroupMessageEvent):
-
+    wot2 = open(str(FilePath(r'/function/xuanchuan.txt')), encoding='UTF-8')
+    text = wot2.read()
+    wot2.close()
     tyt_1 = open(str(FilePath(r'/function/group_id.txt')), encoding='UTF-8')
     tyt_2 = tyt_1.readlines()
 
@@ -48,8 +50,6 @@ async def handle_func(bot: Bot, event: GroupMessageEvent):
     s = hang - 1
     group_id = tyt_2[s]
 
-    wot2 = open(str(FilePath(r'/function/xuanchuan.txt')), encoding='UTF-8')
-    text = wot2.read()
-    wot2.close()
+
 
     await pvp.send(group_id=int(group_id), message=text, auto_escape=False)
