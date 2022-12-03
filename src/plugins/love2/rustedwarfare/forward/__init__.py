@@ -2,7 +2,7 @@ from nonebot import on_command
 from nonebot.adapters.onebot.v11 import GroupMessageEvent
 from nonebot.adapters.onebot.v11.bot import Bot
 
-from function import FilePath
+from ..function import FilePath
 
 ##本模块转用于对铁锈群进行聊天内容转发
 
