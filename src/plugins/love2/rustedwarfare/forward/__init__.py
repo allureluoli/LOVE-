@@ -24,7 +24,7 @@ async def handle_func(bot: Bot, event: GroupMessageEvent):
     hang = 0
     for x in range(len(tyt_2)):
         hang = hang + 1
-    hang=32
+
     #内置循环
     while hang > 0:#循环32次
         hang = hang - 1
