@@ -1,5 +1,7 @@
+import random
+
 from nonebot import on_command
-from nonebot.adapters.onebot.v11 import GroupMessageEvent
+from nonebot.adapters.onebot.v11 import GroupMessageEvent, Event
 from nonebot.adapters.onebot.v11.bot import Bot
 
 from ..function import FilePath
@@ -41,3 +43,27 @@ async def handle_func(bot: Bot, event: GroupMessageEvent):
         wot2.close()
 
         await pvp.send(group_id=int(group_id), message=text, auto_escape=False)
+
+
+
+#开始写骰子(
+'''
+
+指令格式为，LOVE丢XXX
+LOVE回复：你丢出了XXX点
+
+'''
+touzi = on_command(cmd='LOVE丢', priority=50)
+@touzi.handle()
+
+
+async def handle_func(bot: Bot, event: Event):
+    text = str(event.get_message()).split('丢', 1)
+
+    rnd3 = random.Random()
+    x = rnd3.randint(0, int(text[1]))
+
+    try:
+        await touzi.send(f'呐呐呐~你丢出了{x}点呢！')
+    except:
+        await touzi.send("请输入一个正确的点数哦~")

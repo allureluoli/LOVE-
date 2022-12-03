@@ -23,6 +23,13 @@ async def handle_func(bot: Bot, event: Event):
     image = MessageSegment.image(path)
     await tu2.finish(image)
 
+vd_tu=on_fullmatch(['vd'],priority=50)
+@vd_tu.handle()
+async def handle_func(bot: Bot, event: Event):
+    path = Path(FilePath("/image/vd.jpg")).parent / "vd.jpg"
+    # 构造图片消息段
+    image = MessageSegment.image(path)
+    await vd_tu.finish(image)
 
 tu233 = on_fullmatch(['2333'], priority=50)
 
@@ -31,6 +38,7 @@ async def handle_func(bot: Bot, event: Event):
     # 构造图片消息段
     image = MessageSegment.face(id_=18)
     await tu233.send(image)
+
 
 
 tu=on_fullmatch(['英灵召唤'],priority=50)
@@ -151,6 +159,9 @@ async def handle_func(bot: Bot, event: Event):
         await txztj.send(f"恭喜你抓到了【{list_1[x]}】捏!将它抱回家吧！")
     except:
         await txztj.send("没有抓到捏~~嘿嘿！")
+
+
+
 
 txztj2 = on_fullmatch(['战队抓兔机'], priority=50)
 
