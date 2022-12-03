@@ -2,6 +2,7 @@ from . import(
     help,
     rw,
     PVP,
-    home
+    home,
+    forward
 )
 

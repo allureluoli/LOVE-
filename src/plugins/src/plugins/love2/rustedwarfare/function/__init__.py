@@ -8,13 +8,13 @@ class Dialogue:
     m=''
     #dialogue_1=''
     def __init__(self,x,m):
-        #
+        #使用面向对线，创建类，对类中的对象赋值
         self.x = x
         self.m = m
         #self.dialogue_1 =dialogue_1
     def speak(self):
         dialogue_1 = on_fullmatch([self.x], priority=50)
-        @dialogue_1.handle() #
+        @dialogue_1.handle() #出错
         async def handle_func(bot: Bot, event: Event):
             await dialogue_1.send(self.m)
 

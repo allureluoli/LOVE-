@@ -101,7 +101,6 @@ class wcnm:
             FG_2.append(FG_1[0])
             FG_2.append(FG_1[1])
             i = i + 1
-
         except:
             print("又BUG了喵")
     Fi_1.close()
