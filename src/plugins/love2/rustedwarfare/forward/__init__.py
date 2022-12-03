@@ -1,7 +1,8 @@
 import random
+from pathlib import Path
 
 from nonebot import on_command
-from nonebot.adapters.onebot.v11 import GroupMessageEvent, Event
+from nonebot.adapters.onebot.v11 import GroupMessageEvent, Event, MessageSegment
 from nonebot.adapters.onebot.v11.bot import Bot
 
 from ..function import FilePath
@@ -61,9 +62,33 @@ async def handle_func(bot: Bot, event: Event):
     text = str(event.get_message()).split('丢', 1)
 
     rnd3 = random.Random()
-    x = rnd3.randint(0, int(text[1]))
+    x = rnd3.randint(1, int(text[1]))
 
     try:
         await touzi.send(f'呐呐呐~你丢出了{x}点呢！')
     except:
         await touzi.send("请输入一个正确的点数哦~")
+
+
+solo = on_command(cmd='单挑抽图', priority=50)
+
+solo_1=['登岛','巨岛','直岛','火桥','山丘','冰岛','湖','小岛','极地对峙']
+MapImage=['[p2]Beach landing (2p) [by hxyy]_map','[p2]Big Island (2p)_map','[p2]Dire_Straight (2p) [by uber]_map'
+          ,'[p2]Fire Bridge (2p) [by uber]_map','[p2]Hills_(2p)_[By Tstis & KPSS]_map','[p2]Ice Island (2p)_map',
+          '[p2]Lake (2p)_map','[p2]Small_Island (2p)_map','[p2]Two_cold_sides (2p)_map'
+          ]
+@solo.handle()
+
+
+async def handle_func(bot: Bot, event: Event):
+
+
+
+        rnd3 = random.Random()
+        x = rnd3.randint(0, 8)
+        xx_1 = '你们抽到的的地图为：'
+        path = Path(FilePath(f"/forward/{MapImage[x]}.png")).parent / f"{MapImage[x]}.png"
+        # 构造图片消息段
+        image = MessageSegment.image(path)
+        # 构造消息段
+        await solo.send(image)
