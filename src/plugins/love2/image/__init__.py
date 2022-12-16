@@ -5,6 +5,25 @@ from nonebot import  on_fullmatch,on_command
 from nonebot.adapters.onebot.v11 import MessageSegment, Event, event, GroupMessageEvent
 from nonebot.adapters.onebot.v11.bot import Bot
 from ..function import FilePath
+from .setubug import Setu
+
+#https://api.lolicon.app/setu/v2
+
+Asetu=on_fullmatch(['随机色图'],priority=50)
+@Asetu.handle()
+async def handle_func(bot: Bot, event: Event):
+
+    # 构造图片消息段
+
+    setu=''
+    Text=Setu(setu)
+
+
+    image = MessageSegment.image(Text)
+
+    await Asetu.finish(image)
+
+
 
 
 tu2=on_fullmatch(['MIKU','血月是个什么','北音'],priority=50)
@@ -161,7 +180,12 @@ async def handle_func(bot: Bot, event: Event):
         await txztj.send("没有抓到捏~~嘿嘿！")
 
 
+wobulijiel = on_fullmatch('我真不理解',priority=50)
 
+@wobulijiel.handle()
+
+async def handle_func(bot: Bot, event: Event):
+    await wobulijiel.send("真不理解")
 
 txztj2 = on_fullmatch(['战队抓兔机'], priority=50)
 
@@ -175,6 +199,7 @@ async def handle_func(bot: Bot, event: Event):
         await txztj2.send(f"恭喜你抓到了【{list_1[x]}】捏!将它抱回家吧！")
     except:
         await txztj2.send("没有抓到捏~~嘿嘿！")
+
 
 
 

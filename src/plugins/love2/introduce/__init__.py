@@ -5,7 +5,6 @@ from nonebot.adapters.onebot.v11 import Event, GroupMessageEvent, event
 from nonebot.adapters.onebot.v11.bot import Bot
 
 
-
 introduce_2 = on_fullmatch([''], rule=to_me(),priority=50)
 @introduce_2.handle()
 async def handle_func(bot: Bot, event: Event):
@@ -40,7 +39,7 @@ async def handle_func(bot: Bot, event: Event):
 
 
 
-six = on_fullmatch(['6'], priority=50)
+six = on_fullmatch(['发送消息多条示例'], priority=50)
 
 
 @six.handle()
@@ -48,7 +47,7 @@ async def handle_func(bot: Bot, event: Event):
     h = 3
     while h > 0:
         h = h - 1
-        list = ['你谈吐良好的样子更好哦', '不要一直Q6喔', '乖']
+        list = ['第一条消息', '第二条消息', '第三条消息']
         await six.send(list[h])
 
 pao = on_fullmatch(['。'], priority=50)

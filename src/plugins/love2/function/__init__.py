@@ -24,6 +24,8 @@ miss_1.speak()
 miss_2 =Dialogue('测试2','测试2成功')
 miss_2.speak()
 
+miss_3 = Dialogue('6','666')
+miss_3.speak()
 
 def getRootPath():
     # 获取文件目录
