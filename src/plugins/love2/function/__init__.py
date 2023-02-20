@@ -18,10 +18,10 @@ class Dialogue:
         async def handle_func(bot: Bot, event: Event):
             await dialogue_1.send(self.m)
 
-miss_1 = Dialogue('测试','测试成功')
+miss_1 = Dialogue('爱你','love酱也爱你喵！')
 miss_1.speak()
 
-miss_2 =Dialogue('测试2','测试2成功')
+miss_2 =Dialogue('傻逼','说话要文明！')
 miss_2.speak()
 
 miss_3 = Dialogue('6','666')
