@@ -9,20 +9,20 @@ from .setubug import Setu
 
 #https://api.lolicon.app/setu/v2
 
-Asetu=on_fullmatch(['随机色图'],priority=50)
-@Asetu.handle()
-async def handle_func(bot: Bot, event: Event):
-
-    # 构造图片消息段
-
-    setu=''
-    Text=Setu(setu)
-
-
-    image = MessageSegment.image(Text)
-
-    await Asetu.finish(image)
-
+# Asetu=on_fullmatch(['随机色图'],priority=50)
+# @Asetu.handle()
+# async def handle_func(bot: Bot, event: Event):
+#
+#     # 构造图片消息段
+#
+#     setu=''
+#     Text=Setu(setu)
+#
+#
+#     image = MessageSegment.image(Text)
+#
+#     await Asetu.finish(image)
+#
 
 
 

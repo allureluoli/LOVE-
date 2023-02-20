@@ -27,6 +27,10 @@ miss_2.speak()
 miss_3 = Dialogue('6','666')
 miss_3.speak()
 
+miss_4 = Dialogue('单位查询','请以 单位查询-单位名 的格式进行查询，数据源自铁锈战争wiki：”https://rustedwarfare.org/wiki/%E9%A6%96%E9%A1%B5“')
+miss_4.speak()
+
+
 def getRootPath():
     # 获取文件目录
     curPath = os.path.abspath(os.path.dirname(__file__))
