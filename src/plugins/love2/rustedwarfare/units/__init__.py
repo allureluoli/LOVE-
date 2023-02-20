@@ -67,7 +67,7 @@ a = wiki("text")
 a.wiki()
 
 
-query = on_command(cmd='单位查询-', aliases='单位查询-',priority=20)
+query = on_command(cmd='单位查询-', aliases={"单位查询-","单位查询一","查询-"},priority=20)
 
 
 @query.handle()
