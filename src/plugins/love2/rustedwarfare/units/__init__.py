@@ -44,11 +44,12 @@ class wiki():
             Soup_4= BeautifulSoup(str(soup_4),"html.parser")
 
             list_1 =Soup_4.get_text().strip().replace('...','').replace(", ","")
-            new_string = re.sub(r'\n\s*\n', '\n', list_1).replace("血量\n","血量：").replace("可攻击单位\n","可攻击单位:").replace("建造用单位\n","建造用单位").replace("移动范围\n","移动范围：").replace("人为建造","【人为建造】：")
-            neew_string = new_string.replace("攻击距离\n","攻击距离:").replace("价格\n","价格:").replace("速度\n","速度：").replace("旋转速度\n","旋转速度:").replace("射击延迟\n","射击延迟:").replace("【自动生成","自动生成】：")
+            new_string = re.sub(r'\n\s*\n', '\n', list_1).replace("血量\n","血量：").replace("可攻击单位\n","可攻击单位:").replace("建造用单位\n","建造用单位").replace("移动范围\n","移动范围：").replace("人为建造","【人为建造】：").replace("质量\t","质量：")
+            neew_string = new_string.replace("攻击距离\n","攻击距离:").replace("价格\n","价格:").replace("速度\n","速度：").replace("旋转速度\n","旋转速度:").replace("射击延迟\n","射击延迟:").replace("【自动生成","自动生成】：").replace("运输","运输：")
             neeew_string =neew_string.replace("直接伤害（每发子弹）\n","直接伤害（每发子弹）：").replace("制造前提\n","制造前提:").replace("生命值\n","生命值：").replace("科技等级\n","科技等级：").replace("视野","视野：")
 
             wiki_text=neeew_string
+
             return wiki_text
 
         except error.HTTPError as e:
@@ -62,12 +63,12 @@ class wiki():
 
 
 
-a = wiki("text")
+a = wiki("坦克")
 
-a.wiki()
+print(a.wiki())
 
 
-query = on_command(cmd='单位查询-', aliases={"单位查询-","单位查询一","查询-"},priority=20)
+query = on_command(cmd='单位查询-',aliases={"单位查询-","单位查询—","查询-"},priority=20)
 
 
 @query.handle()
@@ -77,7 +78,7 @@ async def handle_func(bot: Bot, event: GroupMessageEvent, ):
 
 
     try:
-        a = wiki(text)
+        a = wiki(text[1])
 
         await query.send(a.wiki())
 
