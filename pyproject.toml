@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "love"
+name = "LOVE"
 version = "0.1.0"
-description = "love"
+description = "LOVE"
 authors = []
 readme = "README.md"
 
@@ -13,8 +13,9 @@ nonebot2 = "^2.0.0-beta.1"
 nb-cli = "^0.6.0"
 
 [tool.nonebot]
-plugins = ["nonebot_plugin_apscheduler"]
-plugin_dirs = ["src/plugins"]
+plugins = ["nonebot_plugin_gspanel"]
+plugin_dirs = ["love/plugins"]
+adapters = [{name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11", project_link = "nonebot-adapter-onebot", desc = "OneBot V11 协议"}]
 
 [build-system]
 requires = ["poetry_core>=1.0.0"]

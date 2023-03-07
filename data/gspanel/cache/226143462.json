@@ -1,0 +1,3024 @@
+{
+  "avatars": [
+    {
+      "id": 10000078,
+      "rarity": 5,
+      "name": "艾尔海森",
+      "slogan": "诲韬诤言",
+      "element": "草",
+      "cons": 0,
+      "fetter": 9,
+      "level": 90,
+      "icon": "UI_AvatarIcon_Alhatham",
+      "gachaAvatarImg": "UI_Gacha_AvatarImg_Alhatham",
+      "baseProp": {
+        "生命值": 13348.04296875,
+        "攻击力": 855.1534423828125,
+        "防御力": 781.6198120117188
+      },
+      "fightProp": {
+        "生命值": 19113.921875,
+        "攻击力": 1437.7846972552506,
+        "防御力": 1006.6393432617188,
+        "暴击率": 51.37999653816223,
+        "暴击伤害": 226.7848014831543,
+        "治疗加成": 0,
+        "元素精通": 287.47998046875,
+        "元素充能效率": 121.37000560760498,
+        "物理伤害加成": 0,
+        "火元素伤害加成": 0,
+        "水元素伤害加成": 0,
+        "风元素伤害加成": 0,
+        "雷元素伤害加成": 0,
+        "草元素伤害加成": 75.39999485015869,
+        "冰元素伤害加成": 0,
+        "岩元素伤害加成": 0
+      },
+      "skills": {
+        "a": {
+          "style": "",
+          "icon": "Skill_A_01",
+          "level": 9,
+          "originLvl": 9
+        },
+        "e": {
+          "style": "",
+          "icon": "Skill_S_Alhatham_01",
+          "level": 10,
+          "originLvl": 10
+        },
+        "q": {
+          "style": "",
+          "icon": "Skill_E_Alhatham_01",
+          "level": 9,
+          "originLvl": 9
+        }
+      },
+      "consts": [
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Alhatham_02"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Alhatham_01"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_U_Alhatham_01"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Alhatham_03"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_U_Alhatham_02"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Alhatham_04"
+        }
+      ],
+      "weapon": {
+        "id": 11512,
+        "rarity": 5,
+        "name": "裁叶萃光",
+        "affix": 1,
+        "level": 90,
+        "icon": "UI_EquipIcon_Sword_Ayus",
+        "main": 542,
+        "sub": {
+          "prop": "暴击伤害",
+          "value": "88.2%"
+        }
+      },
+      "relics": [
+        {
+          "pos": 1,
+          "rarity": 5,
+          "name": "梦中的铁花",
+          "setName": "饰金之梦",
+          "level": 20,
+          "main": {
+            "prop": "生命值",
+            "value": "4780"
+          },
+          "sub": [
+            {
+              "prop": "暴击伤害",
+              "value": "23.3%"
+            },
+            {
+              "prop": "暴击率",
+              "value": "3.9%"
+            },
+            {
+              "prop": "充能效率",
+              "value": "11.7%"
+            },
+            {
+              "prop": "元素精通",
+              "value": "21"
+            }
+          ],
+          "calc": {
+            "rank": "SS",
+            "total": 42.6,
+            "nohit": 0,
+            "main": 0.0,
+            "sub": [
+              {
+                "style": "great",
+                "goal": 23.3
+              },
+              {
+                "style": "great",
+                "goal": 7.8
+              },
+              {
+                "style": "use",
+                "goal": 4.9
+              },
+              {
+                "style": "great",
+                "goal": 5.6
+              }
+            ],
+            "main_pct": 100,
+            "total_pct": 102.4
+          },
+          "icon": "UI_RelicIcon_15026_4"
+        },
+        {
+          "pos": 2,
+          "rarity": 5,
+          "name": "裁断的翎羽",
+          "setName": "饰金之梦",
+          "level": 20,
+          "main": {
+            "prop": "攻击力",
+            "value": "311"
+          },
+          "sub": [
+            {
+              "prop": "暴击率",
+              "value": "3.5%"
+            },
+            {
+              "prop": "防御力",
+              "value": "5.1%"
+            },
+            {
+              "prop": "暴击伤害",
+              "value": "23.3%"
+            },
+            {
+              "prop": "生命值",
+              "value": "986"
+            }
+          ],
+          "calc": {
+            "rank": "S",
+            "total": 31.0,
+            "nohit": 3,
+            "main": 0.0,
+            "sub": [
+              {
+                "style": "great",
+                "goal": 7.0
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "great",
+                "goal": 23.3
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              }
+            ],
+            "main_pct": 100,
+            "total_pct": 102.4
+          },
+          "icon": "UI_RelicIcon_15026_2"
+        },
+        {
+          "pos": 3,
+          "rarity": 5,
+          "name": "雷霆的时计",
+          "setName": "如雷的盛怒",
+          "level": 20,
+          "main": {
+            "prop": "元素精通",
+            "value": "187"
+          },
+          "sub": [
+            {
+              "prop": "攻击力",
+              "value": "53"
+            },
+            {
+              "prop": "暴击伤害",
+              "value": "20.2%"
+            },
+            {
+              "prop": "暴击率",
+              "value": "3.9%"
+            },
+            {
+              "prop": "攻击力",
+              "value": "11.1%"
+            }
+          ],
+          "calc": {
+            "rank": "SSS",
+            "total": 46.8,
+            "nohit": 0,
+            "main": 12.5,
+            "sub": [
+              {
+                "style": "use",
+                "goal": 4.1
+              },
+              {
+                "style": "great",
+                "goal": 20.2
+              },
+              {
+                "style": "great",
+                "goal": 7.8
+              },
+              {
+                "style": "use",
+                "goal": 7.4
+              }
+            ],
+            "main_pct": 100.1,
+            "total_pct": 89.9
+          },
+          "icon": "UI_RelicIcon_15005_5"
+        },
+        {
+          "pos": 4,
+          "rarity": 5,
+          "name": "如蜜的终宴",
+          "setName": "饰金之梦",
+          "level": 20,
+          "main": {
+            "prop": "草伤加成",
+            "value": "46.6%"
+          },
+          "sub": [
+            {
+              "prop": "攻击力",
+              "value": "4.1%"
+            },
+            {
+              "prop": "充能效率",
+              "value": "9.7%"
+            },
+            {
+              "prop": "防御力",
+              "value": "12.4%"
+            },
+            {
+              "prop": "攻击力",
+              "value": "51"
+            }
+          ],
+          "calc": {
+            "rank": "B",
+            "total": 19.5,
+            "nohit": 1,
+            "main": 11.7,
+            "sub": [
+              {
+                "style": "use",
+                "goal": 2.7
+              },
+              {
+                "style": "use",
+                "goal": 4.1
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "use",
+                "goal": 4.0
+              }
+            ],
+            "main_pct": 96.9,
+            "total_pct": 89.9
+          },
+          "icon": "UI_RelicIcon_15026_1"
+        },
+        {
+          "pos": 5,
+          "rarity": 5,
+          "name": "沙王的投影",
+          "setName": "饰金之梦",
+          "level": 20,
+          "main": {
+            "prop": "暴击率",
+            "value": "31.1%"
+          },
+          "sub": [
+            {
+              "prop": "暴击伤害",
+              "value": "21.8%"
+            },
+            {
+              "prop": "攻击力",
+              "value": "39"
+            },
+            {
+              "prop": "防御力",
+              "value": "37"
+            },
+            {
+              "prop": "防御力",
+              "value": "6.6%"
+            }
+          ],
+          "calc": {
+            "rank": "S",
+            "total": 35.5,
+            "nohit": 2,
+            "main": 15.5,
+            "sub": [
+              {
+                "style": "great",
+                "goal": 21.8
+              },
+              {
+                "style": "use",
+                "goal": 3.0
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              }
+            ],
+            "main_pct": 100.0,
+            "total_pct": 88.1
+          },
+          "icon": "UI_RelicIcon_15026_3"
+        }
+      ],
+      "relicSet": {
+        "饰金之梦": 4,
+        "如雷的盛怒": 1
+      },
+      "relicCalc": {
+        "rank": "S",
+        "total": 175.4
+      },
+      "damage": {
+        "level": "ACE",
+        "data": [
+          [
+            "E协同蔓激化总伤",
+            "46169",
+            "30597"
+          ],
+          [
+            "E一轮普攻蔓激化",
+            "144508",
+            "88477"
+          ],
+          [
+            "10段Q蔓激化总伤",
+            "175234",
+            "116130"
+          ]
+        ],
+        "buff": [
+          [
+            "裁叶萃光被动",
+            "暴击率提高4%"
+          ],
+          [
+            "裁叶萃光被动",
+            "普攻伤害基于元素精通提升524(437*120%)"
+          ],
+          [
+            "裁叶萃光被动",
+            "E基础伤害基于元素精通提升524(437*120%)"
+          ],
+          [
+            "饰金4效果",
+            "触发反应后元素精通提升150"
+          ],
+          [
+            "艾尔海森天赋",
+            "Q伤害基于元素精通提升43.7%"
+          ],
+          [
+            "艾尔海森天赋",
+            "E协同伤害基于元素精通提升43.7%"
+          ],
+          [
+            "蔓激化反应",
+            "触发蔓激化后，造成伤害值提升4220"
+          ]
+        ]
+      },
+      "time": 1678080337
+    },
+    {
+      "id": 10000073,
+      "rarity": 5,
+      "name": "纳西妲",
+      "slogan": "白草净华",
+      "element": "草",
+      "cons": 0,
+      "fetter": 10,
+      "level": 90,
+      "icon": "UI_AvatarIcon_Nahida",
+      "gachaAvatarImg": "UI_Gacha_AvatarImg_Nahida",
+      "baseProp": {
+        "生命值": 10360.041015625,
+        "攻击力": 753.3361206054688,
+        "防御力": 630.214599609375
+      },
+      "fightProp": {
+        "生命值": 15677.791015625,
+        "攻击力": 1422.1918068743616,
+        "防御力": 729.0987548828125,
+        "暴击率": 53.20999622344971,
+        "暴击伤害": 126.94000005722046,
+        "治疗加成": 0,
+        "元素精通": 622.4519653320312,
+        "元素充能效率": 122.67000675201416,
+        "物理伤害加成": 0,
+        "火元素伤害加成": 0,
+        "水元素伤害加成": 0,
+        "风元素伤害加成": 0,
+        "雷元素伤害加成": 0,
+        "草元素伤害加成": 61.59999966621399,
+        "冰元素伤害加成": 0,
+        "岩元素伤害加成": 0
+      },
+      "skills": {
+        "a": {
+          "style": "",
+          "icon": "Skill_A_Catalyst_MD",
+          "level": 7,
+          "originLvl": 7
+        },
+        "e": {
+          "style": "",
+          "icon": "Skill_S_Nahida_01",
+          "level": 9,
+          "originLvl": 9
+        },
+        "q": {
+          "style": "",
+          "icon": "Skill_E_Nahida_01",
+          "level": 9,
+          "originLvl": 9
+        }
+      },
+      "consts": [
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Nahida_01"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Nahida_02"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_U_Nahida_01"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Nahida_03"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_U_Nahida_02"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Nahida_04"
+        }
+      ],
+      "weapon": {
+        "id": 14403,
+        "rarity": 4,
+        "name": "祭礼残章",
+        "affix": 1,
+        "level": 90,
+        "icon": "UI_EquipIcon_Catalyst_Fossil",
+        "main": 454,
+        "sub": {
+          "prop": "元素精通",
+          "value": "221"
+        }
+      },
+      "relics": [
+        {
+          "pos": 1,
+          "rarity": 5,
+          "name": "迷宫的游人",
+          "setName": "深林的记忆",
+          "level": 20,
+          "main": {
+            "prop": "生命值",
+            "value": "4780"
+          },
+          "sub": [
+            {
+              "prop": "暴击伤害",
+              "value": "24.1%"
+            },
+            {
+              "prop": "元素精通",
+              "value": "42"
+            },
+            {
+              "prop": "暴击率",
+              "value": "7%"
+            },
+            {
+              "prop": "攻击力",
+              "value": "4.7%"
+            }
+          ],
+          "calc": {
+            "rank": "ACE",
+            "total": 55.2,
+            "nohit": 0,
+            "main": 0.0,
+            "sub": [
+              {
+                "style": "great",
+                "goal": 24.1
+              },
+              {
+                "style": "great",
+                "goal": 14.0
+              },
+              {
+                "style": "great",
+                "goal": 14.0
+              },
+              {
+                "style": "use",
+                "goal": 3.4
+              }
+            ],
+            "main_pct": 100,
+            "total_pct": 99.4
+          },
+          "icon": "UI_RelicIcon_15025_4"
+        },
+        {
+          "pos": 2,
+          "rarity": 5,
+          "name": "翠蔓的智者",
+          "setName": "深林的记忆",
+          "level": 20,
+          "main": {
+            "prop": "攻击力",
+            "value": "311"
+          },
+          "sub": [
+            {
+              "prop": "攻击力",
+              "value": "17.5%"
+            },
+            {
+              "prop": "暴击率",
+              "value": "10.1%"
+            },
+            {
+              "prop": "防御力",
+              "value": "16"
+            },
+            {
+              "prop": "暴击伤害",
+              "value": "12.4%"
+            }
+          ],
+          "calc": {
+            "rank": "SSS",
+            "total": 45.1,
+            "nohit": 0,
+            "main": 0.0,
+            "sub": [
+              {
+                "style": "use",
+                "goal": 12.8
+              },
+              {
+                "style": "great",
+                "goal": 20.2
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "great",
+                "goal": 12.4
+              }
+            ],
+            "main_pct": 100,
+            "total_pct": 99.4
+          },
+          "icon": "UI_RelicIcon_15025_2"
+        },
+        {
+          "pos": 3,
+          "rarity": 5,
+          "name": "贤智的定期",
+          "setName": "深林的记忆",
+          "level": 20,
+          "main": {
+            "prop": "元素精通",
+            "value": "187"
+          },
+          "sub": [
+            {
+              "prop": "暴击伤害",
+              "value": "13.2%"
+            },
+            {
+              "prop": "攻击力",
+              "value": "35"
+            },
+            {
+              "prop": "防御力",
+              "value": "13.1%"
+            },
+            {
+              "prop": "生命值",
+              "value": "538"
+            }
+          ],
+          "calc": {
+            "rank": "A",
+            "total": 27.1,
+            "nohit": 3,
+            "main": 15.6,
+            "sub": [
+              {
+                "style": "great",
+                "goal": 13.2
+              },
+              {
+                "style": "use",
+                "goal": 3.4
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              }
+            ],
+            "main_pct": 100.1,
+            "total_pct": 84.1
+          },
+          "icon": "UI_RelicIcon_15025_5"
+        },
+        {
+          "pos": 4,
+          "rarity": 5,
+          "name": "角斗士的酣醉",
+          "setName": "角斗士的终幕礼",
+          "level": 20,
+          "main": {
+            "prop": "草伤加成",
+            "value": "46.6%"
+          },
+          "sub": [
+            {
+              "prop": "充能效率",
+              "value": "22.7%"
+            },
+            {
+              "prop": "攻击力",
+              "value": "33"
+            },
+            {
+              "prop": "元素精通",
+              "value": "35"
+            },
+            {
+              "prop": "暴击伤害",
+              "value": "7.8%"
+            }
+          ],
+          "calc": {
+            "rank": "SS",
+            "total": 42.8,
+            "nohit": 0,
+            "main": 15.5,
+            "sub": [
+              {
+                "style": "use",
+                "goal": 15.0
+              },
+              {
+                "style": "use",
+                "goal": 3.2
+              },
+              {
+                "style": "great",
+                "goal": 11.7
+              },
+              {
+                "style": "great",
+                "goal": 7.8
+              }
+            ],
+            "main_pct": 100.0,
+            "total_pct": 80.5
+          },
+          "icon": "UI_RelicIcon_15001_1"
+        },
+        {
+          "pos": 5,
+          "rarity": 5,
+          "name": "月桂的宝冠",
+          "setName": "深林的记忆",
+          "level": 20,
+          "main": {
+            "prop": "暴击率",
+            "value": "31.1%"
+          },
+          "sub": [
+            {
+              "prop": "攻击力",
+              "value": "18"
+            },
+            {
+              "prop": "攻击力",
+              "value": "14%"
+            },
+            {
+              "prop": "元素精通",
+              "value": "23"
+            },
+            {
+              "prop": "暴击伤害",
+              "value": "19.4%"
+            }
+          ],
+          "calc": {
+            "rank": "SSS",
+            "total": 45.9,
+            "nohit": 0,
+            "main": 15.5,
+            "sub": [
+              {
+                "style": "use",
+                "goal": 1.8
+              },
+              {
+                "style": "use",
+                "goal": 10.3
+              },
+              {
+                "style": "great",
+                "goal": 7.7
+              },
+              {
+                "style": "great",
+                "goal": 19.4
+              }
+            ],
+            "main_pct": 100.0,
+            "total_pct": 84.1
+          },
+          "icon": "UI_RelicIcon_15025_3"
+        }
+      ],
+      "relicSet": {
+        "深林的记忆": 4,
+        "角斗士的终幕礼": 1
+      },
+      "relicCalc": {
+        "rank": "SSS",
+        "total": 216.1
+      },
+      "damage": {
+        "level": "S",
+        "data": [
+          [
+            "灭净三业伤害",
+            "12022",
+            "9727"
+          ],
+          [
+            "灭净三业蔓激化",
+            "24599",
+            "19902"
+          ],
+          [
+            "Q站场E蔓激化",
+            "32673",
+            "27289"
+          ]
+        ],
+        "buff": [
+          [
+            "深林4效果",
+            "E或Q命中敌人后草抗降低30%"
+          ],
+          [
+            "纳西妲天赋",
+            "开Q后领域内当前场上角色元素精通提升156点"
+          ],
+          [
+            "纳西妲天赋",
+            "灭净三业伤害基于元素精通提升42.2%，开Q后为57.8%(需纳西妲站场)"
+          ],
+          [
+            "纳西妲天赋",
+            "灭净三业暴击率基于元素精通提升12.7%，开Q后为17.3%(需纳西妲站场)"
+          ],
+          [
+            "纳西妲天赋",
+            "开Q后灭净三业伤害提升25.3%(按1位火元素角色计算)"
+          ]
+        ]
+      },
+      "time": 1678080337
+    },
+    {
+      "id": 10000029,
+      "rarity": 5,
+      "name": "可莉",
+      "slogan": "逃跑的太阳",
+      "element": "火",
+      "cons": 0,
+      "fetter": 10,
+      "level": 80,
+      "icon": "UI_AvatarIcon_Klee",
+      "gachaAvatarImg": "UI_Gacha_AvatarImg_Klee",
+      "baseProp": {
+        "生命值": 9563.453125,
+        "攻击力": 331.474853515625,
+        "防御力": 571.622314453125
+      },
+      "fightProp": {
+        "生命值": 17758.27734375,
+        "攻击力": 866.7338547799736,
+        "防御力": 754.9403076171875,
+        "暴击率": 53.9900004863739,
+        "暴击伤害": 158.34999084472656,
+        "治疗加成": 0,
+        "元素精通": 37.29999923706055,
+        "元素充能效率": 110.3600025177002,
+        "物理伤害加成": 0,
+        "火元素伤害加成": 90.39999842643738,
+        "水元素伤害加成": 0,
+        "风元素伤害加成": 0,
+        "雷元素伤害加成": 0,
+        "草元素伤害加成": 0,
+        "冰元素伤害加成": 0,
+        "岩元素伤害加成": 0
+      },
+      "skills": {
+        "a": {
+          "style": "",
+          "icon": "Skill_A_Catalyst_MD",
+          "level": 9,
+          "originLvl": 9
+        },
+        "e": {
+          "style": "",
+          "icon": "Skill_S_Klee_01",
+          "level": 9,
+          "originLvl": 9
+        },
+        "q": {
+          "style": "",
+          "icon": "Skill_E_Klee_01",
+          "level": 9,
+          "originLvl": 9
+        }
+      },
+      "consts": [
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Klee_01"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Klee_02"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_U_Klee_01"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Klee_03"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_U_Klee_02"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Klee_04"
+        }
+      ],
+      "weapon": {
+        "id": 14402,
+        "rarity": 4,
+        "name": "流浪乐章",
+        "affix": 1,
+        "level": 1,
+        "icon": "UI_EquipIcon_Catalyst_Troupe",
+        "main": 42,
+        "sub": {
+          "prop": "暴击伤害",
+          "value": "12%"
+        }
+      },
+      "relics": [
+        {
+          "pos": 1,
+          "rarity": 5,
+          "name": "魔女的炎之花",
+          "setName": "炽烈的炎之魔女",
+          "level": 20,
+          "main": {
+            "prop": "生命值",
+            "value": "4780"
+          },
+          "sub": [
+            {
+              "prop": "暴击伤害",
+              "value": "25.6%"
+            },
+            {
+              "prop": "防御力",
+              "value": "6.6%"
+            },
+            {
+              "prop": "元素精通",
+              "value": "37"
+            },
+            {
+              "prop": "生命值",
+              "value": "11.7%"
+            }
+          ],
+          "calc": {
+            "rank": "S",
+            "total": 34.8,
+            "nohit": 1,
+            "main": 0.0,
+            "sub": [
+              {
+                "style": "great",
+                "goal": 25.6
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "use",
+                "goal": 9.2
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              }
+            ],
+            "main_pct": 100,
+            "total_pct": 100.0
+          },
+          "icon": "UI_RelicIcon_15006_4"
+        },
+        {
+          "pos": 2,
+          "rarity": 5,
+          "name": "魔女常燃之羽",
+          "setName": "炽烈的炎之魔女",
+          "level": 20,
+          "main": {
+            "prop": "攻击力",
+            "value": "311"
+          },
+          "sub": [
+            {
+              "prop": "暴击伤害",
+              "value": "19.4%"
+            },
+            {
+              "prop": "生命值",
+              "value": "4.7%"
+            },
+            {
+              "prop": "暴击率",
+              "value": "7.8%"
+            },
+            {
+              "prop": "充能效率",
+              "value": "10.4%"
+            }
+          ],
+          "calc": {
+            "rank": "SS",
+            "total": 38.7,
+            "nohit": 0,
+            "main": 0.0,
+            "sub": [
+              {
+                "style": "great",
+                "goal": 19.4
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "great",
+                "goal": 15.6
+              },
+              {
+                "style": "use",
+                "goal": 3.7
+              }
+            ],
+            "main_pct": 100,
+            "total_pct": 100.0
+          },
+          "icon": "UI_RelicIcon_15006_2"
+        },
+        {
+          "pos": 3,
+          "rarity": 5,
+          "name": "魔女破灭之时",
+          "setName": "炽烈的炎之魔女",
+          "level": 20,
+          "main": {
+            "prop": "攻击力",
+            "value": "46.6%"
+          },
+          "sub": [
+            {
+              "prop": "暴击率",
+              "value": "10.1%"
+            },
+            {
+              "prop": "攻击力",
+              "value": "18"
+            },
+            {
+              "prop": "暴击伤害",
+              "value": "15.5%"
+            },
+            {
+              "prop": "生命值",
+              "value": "866"
+            }
+          ],
+          "calc": {
+            "rank": "SSS",
+            "total": 46.9,
+            "nohit": 2,
+            "main": 11.6,
+            "sub": [
+              {
+                "style": "great",
+                "goal": 20.2
+              },
+              {
+                "style": "use",
+                "goal": 5.4
+              },
+              {
+                "style": "great",
+                "goal": 15.5
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              }
+            ],
+            "main_pct": 100.0,
+            "total_pct": 89.0
+          },
+          "icon": "UI_RelicIcon_15006_5"
+        },
+        {
+          "pos": 4,
+          "rarity": 5,
+          "name": "渡火者的醒悟",
+          "setName": "渡过烈火的贤人",
+          "level": 20,
+          "main": {
+            "prop": "火伤加成",
+            "value": "46.6%"
+          },
+          "sub": [
+            {
+              "prop": "攻击力",
+              "value": "18"
+            },
+            {
+              "prop": "防御力",
+              "value": "18.2%"
+            },
+            {
+              "prop": "暴击伤害",
+              "value": "14.8%"
+            },
+            {
+              "prop": "防御力",
+              "value": "42"
+            }
+          ],
+          "calc": {
+            "rank": "A",
+            "total": 28.9,
+            "nohit": 4,
+            "main": 15.5,
+            "sub": [
+              {
+                "style": "use",
+                "goal": 5.4
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "great",
+                "goal": 14.8
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              }
+            ],
+            "main_pct": 100.0,
+            "total_pct": 80.9
+          },
+          "icon": "UI_RelicIcon_14003_1"
+        },
+        {
+          "pos": 5,
+          "rarity": 5,
+          "name": "焦灼的魔女帽",
+          "setName": "炽烈的炎之魔女",
+          "level": 20,
+          "main": {
+            "prop": "暴击率",
+            "value": "31.1%"
+          },
+          "sub": [
+            {
+              "prop": "生命值",
+              "value": "598"
+            },
+            {
+              "prop": "生命值",
+              "value": "4.1%"
+            },
+            {
+              "prop": "暴击伤害",
+              "value": "21%"
+            },
+            {
+              "prop": "攻击力",
+              "value": "10.5%"
+            }
+          ],
+          "calc": {
+            "rank": "SS",
+            "total": 40.7,
+            "nohit": 1,
+            "main": 15.5,
+            "sub": [
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "great",
+                "goal": 21.0
+              },
+              {
+                "style": "use",
+                "goal": 10.5
+              }
+            ],
+            "main_pct": 100.0,
+            "total_pct": 86.7
+          },
+          "icon": "UI_RelicIcon_15006_3"
+        }
+      ],
+      "relicSet": {
+        "炽烈的炎之魔女": 4,
+        "渡过烈火的贤人": 1
+      },
+      "relicCalc": {
+        "rank": "SS",
+        "total": 190.0
+      },
+      "damage": {
+        "level": "D",
+        "data": [
+          [
+            "双E后带金花重击",
+            "8250",
+            "5924"
+          ],
+          [
+            "双E后带金花重击蒸发",
+            "15116",
+            "10855"
+          ]
+        ],
+        "buff": [
+          [
+            "流浪乐章被动",
+            "获得48%全元素伤害加成"
+          ],
+          [
+            "魔女4效果",
+            "蒸发融化反应系数提升15%"
+          ],
+          [
+            "魔女4效果",
+            "释放2段E后获得15%火伤加成"
+          ],
+          [
+            "可莉天赋",
+            "带金花的重击伤害提升50%"
+          ]
+        ]
+      },
+      "time": 1678080337
+    },
+    {
+      "id": 10000035,
+      "rarity": 5,
+      "name": "七七",
+      "slogan": "冻冻回魂夜",
+      "element": "冰",
+      "cons": 0,
+      "fetter": 10,
+      "level": 61,
+      "icon": "UI_AvatarIcon_Qiqi",
+      "gachaAvatarImg": "UI_Gacha_AvatarImg_Qiqi",
+      "baseProp": {
+        "生命值": 8694.6767578125,
+        "攻击力": 310.6923828125,
+        "防御力": 648.3310546875
+      },
+      "fightProp": {
+        "生命值": 10960.44921875,
+        "攻击力": 455.14650381938554,
+        "防御力": 730.2115478515625,
+        "暴击率": 13.54999989271164,
+        "暴击伤害": 71.74999713897705,
+        "治疗加成": 61.97999715805054,
+        "元素精通": 51.290000915527344,
+        "元素充能效率": 118.80999803543091,
+        "物理伤害加成": 0,
+        "火元素伤害加成": 0,
+        "水元素伤害加成": 0,
+        "风元素伤害加成": 0,
+        "雷元素伤害加成": 0,
+        "草元素伤害加成": 0,
+        "冰元素伤害加成": 0,
+        "岩元素伤害加成": 0
+      },
+      "skills": {
+        "a": {
+          "style": "",
+          "icon": "Skill_A_01",
+          "level": 1,
+          "originLvl": 1
+        },
+        "e": {
+          "style": "",
+          "icon": "Skill_S_Qiqi_01",
+          "level": 6,
+          "originLvl": 6
+        },
+        "q": {
+          "style": "",
+          "icon": "Skill_E_Qiqi_01",
+          "level": 6,
+          "originLvl": 6
+        }
+      },
+      "consts": [
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Qiqi_01"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Qiqi_02"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_U_Qiqi_01"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Qiqi_03"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_U_Qiqi_02"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Qiqi_04"
+        }
+      ],
+      "weapon": {
+        "id": 11416,
+        "rarity": 4,
+        "name": "笼钓瓶一心",
+        "affix": 1,
+        "level": 20,
+        "icon": "UI_EquipIcon_Sword_Youtou",
+        "main": 109,
+        "sub": {
+          "prop": "攻击力",
+          "value": "15.9%"
+        }
+      },
+      "relics": [
+        {
+          "pos": 1,
+          "rarity": 5,
+          "name": "远方的少女之心",
+          "setName": "被怜爱的少女",
+          "level": 0,
+          "main": {
+            "prop": "生命值",
+            "value": "717"
+          },
+          "sub": [
+            {
+              "prop": "元素精通",
+              "value": "19"
+            },
+            {
+              "prop": "攻击力",
+              "value": "14"
+            },
+            {
+              "prop": "暴击伤害",
+              "value": "7%"
+            }
+          ],
+          "calc": {
+            "rank": "C",
+            "total": 11.8,
+            "nohit": 0,
+            "main": 0.0,
+            "sub": [
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "use",
+                "goal": 4.5
+              },
+              {
+                "style": "great",
+                "goal": 7.0
+              }
+            ],
+            "main_pct": 100,
+            "total_pct": 102.4
+          },
+          "icon": "UI_RelicIcon_14004_4"
+        },
+        {
+          "pos": 2,
+          "rarity": 5,
+          "name": "少女飘摇的思念",
+          "setName": "被怜爱的少女",
+          "level": 0,
+          "main": {
+            "prop": "攻击力",
+            "value": "47"
+          },
+          "sub": [
+            {
+              "prop": "防御力",
+              "value": "19"
+            },
+            {
+              "prop": "元素精通",
+              "value": "16"
+            },
+            {
+              "prop": "生命值",
+              "value": "239"
+            }
+          ],
+          "calc": {
+            "rank": "D",
+            "total": 0.0,
+            "nohit": 0,
+            "main": 0.0,
+            "sub": [
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              }
+            ],
+            "main_pct": 100,
+            "total_pct": 102.4
+          },
+          "icon": "UI_RelicIcon_14004_2"
+        },
+        {
+          "pos": 3,
+          "rarity": 5,
+          "name": "少女苦短的良辰",
+          "setName": "被怜爱的少女",
+          "level": 0,
+          "main": {
+            "prop": "充能效率",
+            "value": "7.8%"
+          },
+          "sub": [
+            {
+              "prop": "攻击力",
+              "value": "4.1%"
+            },
+            {
+              "prop": "生命值",
+              "value": "209"
+            },
+            {
+              "prop": "生命值",
+              "value": "4.7%"
+            }
+          ],
+          "calc": {
+            "rank": "D",
+            "total": 2.8,
+            "nohit": 0,
+            "main": 1.3,
+            "sub": [
+              {
+                "style": "use",
+                "goal": 4.1
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              }
+            ],
+            "main_pct": 55.5,
+            "total_pct": 93.9
+          },
+          "icon": "UI_RelicIcon_14004_5"
+        },
+        {
+          "pos": 4,
+          "rarity": 5,
+          "name": "少女片刻的闲暇",
+          "setName": "被怜爱的少女",
+          "level": 0,
+          "main": {
+            "prop": "攻击力",
+            "value": "7%"
+          },
+          "sub": [
+            {
+              "prop": "生命值",
+              "value": "5.3%"
+            },
+            {
+              "prop": "防御力",
+              "value": "21"
+            },
+            {
+              "prop": "元素精通",
+              "value": "16"
+            },
+            {
+              "prop": "防御力",
+              "value": "6.6%"
+            }
+          ],
+          "calc": {
+            "rank": "D",
+            "total": 0.8,
+            "nohit": 0,
+            "main": 1.7,
+            "sub": [
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              }
+            ],
+            "main_pct": 55.6,
+            "total_pct": 82.5
+          },
+          "icon": "UI_RelicIcon_14004_1"
+        },
+        {
+          "pos": 5,
+          "rarity": 5,
+          "name": "翠绿的猎人之冠",
+          "setName": "翠绿之影",
+          "level": 20,
+          "main": {
+            "prop": "治疗加成",
+            "value": "35.9%"
+          },
+          "sub": [
+            {
+              "prop": "充能效率",
+              "value": "11%"
+            },
+            {
+              "prop": "生命值",
+              "value": "239"
+            },
+            {
+              "prop": "暴击率",
+              "value": "8.6%"
+            },
+            {
+              "prop": "暴击伤害",
+              "value": "14.8%"
+            }
+          ],
+          "calc": {
+            "rank": "ACE",
+            "total": 50.0,
+            "nohit": 0,
+            "main": 15.5,
+            "sub": [
+              {
+                "style": "use",
+                "goal": 7.3
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "great",
+                "goal": 17.2
+              },
+              {
+                "style": "great",
+                "goal": 14.8
+              }
+            ],
+            "main_pct": 100.0,
+            "total_pct": 91.4
+          },
+          "icon": "UI_RelicIcon_15002_3"
+        }
+      ],
+      "relicSet": {
+        "被怜爱的少女": 4,
+        "翠绿之影": 1
+      },
+      "relicCalc": {
+        "rank": "C",
+        "total": 65.4
+      },
+      "damage": {
+        "level": "D",
+        "data": [
+          [
+            "E每跳治疗量",
+            "-",
+            "2105"
+          ],
+          [
+            "Q符咒每次触发治疗量",
+            "-",
+            "2707"
+          ]
+        ],
+        "buff": [
+          [
+            "笼钓瓶一心被动",
+            "普攻重击命中敌人攻击力提升47(15%)"
+          ],
+          [
+            "少女4效果",
+            "E或Q后所有角色受治疗效果提升20%"
+          ]
+        ]
+      },
+      "time": 1678080337
+    },
+    {
+      "id": 10000077,
+      "rarity": 4,
+      "name": "瑶瑶",
+      "slogan": "仙蕊玲珑",
+      "element": "草",
+      "cons": 0,
+      "fetter": 7,
+      "level": 80,
+      "icon": "UI_AvatarIcon_Yaoyao",
+      "gachaAvatarImg": "UI_Gacha_AvatarImg_Yaoyao",
+      "baseProp": {
+        "生命值": 10890.7109375,
+        "攻击力": 694.4571533203125,
+        "防御力": 665.3665161132812
+      },
+      "fightProp": {
+        "生命值": 26201.833984375,
+        "攻击力": 928.1761472381609,
+        "防御力": 794.9965209960938,
+        "暴击率": 29.002800583839417,
+        "暴击伤害": 67.87999868392944,
+        "治疗加成": 50.90000033378601,
+        "元素精通": 39.62999725341797,
+        "元素充能效率": 133.0299973487854,
+        "物理伤害加成": 0,
+        "火元素伤害加成": 0,
+        "水元素伤害加成": 0,
+        "风元素伤害加成": 0,
+        "雷元素伤害加成": 0,
+        "草元素伤害加成": 0,
+        "冰元素伤害加成": 0,
+        "岩元素伤害加成": 0
+      },
+      "skills": {
+        "a": {
+          "style": "",
+          "icon": "Skill_A_03",
+          "level": 1,
+          "originLvl": 1
+        },
+        "e": {
+          "style": "",
+          "icon": "Skill_S_Yaoyao_01",
+          "level": 6,
+          "originLvl": 6
+        },
+        "q": {
+          "style": "",
+          "icon": "Skill_E_Yaoyao_01",
+          "level": 2,
+          "originLvl": 2
+        }
+      },
+      "consts": [
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Yaoyao_01"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Yaoyao_02"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_U_Yaoyao_01"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Yaoyao_03"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_U_Yaoyao_02"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Yaoyao_04"
+        }
+      ],
+      "weapon": {
+        "id": 13505,
+        "rarity": 5,
+        "name": "和璞鸢",
+        "affix": 1,
+        "level": 70,
+        "icon": "UI_EquipIcon_Pole_Morax",
+        "main": 506,
+        "sub": {
+          "prop": "暴击率",
+          "value": "18.2%"
+        }
+      },
+      "relics": [
+        {
+          "pos": 1,
+          "rarity": 5,
+          "name": "远方的少女之心",
+          "setName": "被怜爱的少女",
+          "level": 20,
+          "main": {
+            "prop": "生命值",
+            "value": "4780"
+          },
+          "sub": [
+            {
+              "prop": "攻击力",
+              "value": "64"
+            },
+            {
+              "prop": "充能效率",
+              "value": "5.2%"
+            },
+            {
+              "prop": "攻击力",
+              "value": "5.3%"
+            },
+            {
+              "prop": "暴击率",
+              "value": "5.8%"
+            }
+          ],
+          "calc": {
+            "rank": "S",
+            "total": 30.8,
+            "nohit": 0,
+            "main": 0.0,
+            "sub": [
+              {
+                "style": "use",
+                "goal": 9.2
+              },
+              {
+                "style": "use",
+                "goal": 4.7
+              },
+              {
+                "style": "use",
+                "goal": 5.3
+              },
+              {
+                "style": "great",
+                "goal": 11.6
+              }
+            ],
+            "main_pct": 100,
+            "total_pct": 100.0
+          },
+          "icon": "UI_RelicIcon_14004_4"
+        },
+        {
+          "pos": 2,
+          "rarity": 5,
+          "name": "少女飘摇的思念",
+          "setName": "被怜爱的少女",
+          "level": 4,
+          "main": {
+            "prop": "攻击力",
+            "value": "100"
+          },
+          "sub": [
+            {
+              "prop": "生命值",
+              "value": "4.7%"
+            },
+            {
+              "prop": "元素精通",
+              "value": "16"
+            },
+            {
+              "prop": "生命值",
+              "value": "239"
+            },
+            {
+              "prop": "防御力",
+              "value": "42"
+            }
+          ],
+          "calc": {
+            "rank": "D",
+            "total": 6.9,
+            "nohit": 1,
+            "main": 0.0,
+            "sub": [
+              {
+                "style": "use",
+                "goal": 4.7
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "use",
+                "goal": 2.2
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              }
+            ],
+            "main_pct": 100,
+            "total_pct": 100.0
+          },
+          "icon": "UI_RelicIcon_14004_2"
+        },
+        {
+          "pos": 3,
+          "rarity": 5,
+          "name": "少女苦短的良辰",
+          "setName": "被怜爱的少女",
+          "level": 20,
+          "main": {
+            "prop": "生命值",
+            "value": "46.6%"
+          },
+          "sub": [
+            {
+              "prop": "防御力",
+              "value": "65"
+            },
+            {
+              "prop": "生命值",
+              "value": "478"
+            },
+            {
+              "prop": "攻击力",
+              "value": "14"
+            },
+            {
+              "prop": "充能效率",
+              "value": "17.5%"
+            }
+          ],
+          "calc": {
+            "rank": "A",
+            "total": 28.7,
+            "nohit": 2,
+            "main": 11.6,
+            "sub": [
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "use",
+                "goal": 4.4
+              },
+              {
+                "style": "use",
+                "goal": 2.0
+              },
+              {
+                "style": "use",
+                "goal": 15.7
+              }
+            ],
+            "main_pct": 100.0,
+            "total_pct": 85.0
+          },
+          "icon": "UI_RelicIcon_14004_5"
+        },
+        {
+          "pos": 4,
+          "rarity": 5,
+          "name": "少女片刻的闲暇",
+          "setName": "被怜爱的少女",
+          "level": 0,
+          "main": {
+            "prop": "生命值",
+            "value": "7%"
+          },
+          "sub": [
+            {
+              "prop": "生命值",
+              "value": "239"
+            },
+            {
+              "prop": "元素精通",
+              "value": "23"
+            },
+            {
+              "prop": "防御力",
+              "value": "23"
+            }
+          ],
+          "calc": {
+            "rank": "D",
+            "total": 1.9,
+            "nohit": 0,
+            "main": 1.7,
+            "sub": [
+              {
+                "style": "use",
+                "goal": 2.2
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              }
+            ],
+            "main_pct": 57.5,
+            "total_pct": 85.0
+          },
+          "icon": "UI_RelicIcon_14004_1"
+        },
+        {
+          "pos": 5,
+          "rarity": 5,
+          "name": "月桂的宝冠",
+          "setName": "深林的记忆",
+          "level": 20,
+          "main": {
+            "prop": "治疗加成",
+            "value": "35.9%"
+          },
+          "sub": [
+            {
+              "prop": "充能效率",
+              "value": "10.4%"
+            },
+            {
+              "prop": "暴击伤害",
+              "value": "17.9%"
+            },
+            {
+              "prop": "生命值",
+              "value": "11.7%"
+            },
+            {
+              "prop": "攻击力",
+              "value": "19"
+            }
+          ],
+          "calc": {
+            "rank": "SS",
+            "total": 38.7,
+            "nohit": 0,
+            "main": 11.7,
+            "sub": [
+              {
+                "style": "use",
+                "goal": 9.3
+              },
+              {
+                "style": "great",
+                "goal": 17.9
+              },
+              {
+                "style": "use",
+                "goal": 11.7
+              },
+              {
+                "style": "use",
+                "goal": 2.7
+              }
+            ],
+            "main_pct": 87.5,
+            "total_pct": 82.9
+          },
+          "icon": "UI_RelicIcon_15025_3"
+        }
+      ],
+      "relicSet": {
+        "被怜爱的少女": 4,
+        "深林的记忆": 1
+      },
+      "relicCalc": {
+        "rank": "B",
+        "total": 107.0
+      },
+      "damage": {
+        "level": "A",
+        "data": [
+          [
+            "E每跳治疗量",
+            "-",
+            "1521"
+          ],
+          [
+            "Q每跳治疗量",
+            "-",
+            "1337"
+          ],
+          [
+            "天赋1每跳治疗量",
+            "-",
+            "358"
+          ]
+        ],
+        "buff": [
+          [
+            "和璞鸢被动",
+            "造成伤害提升12%"
+          ],
+          [
+            "和璞鸢被动",
+            "攻击力提升155(满层22.4%攻击力)"
+          ],
+          [
+            "少女4效果",
+            "E或Q后所有角色受治疗效果提升20%"
+          ]
+        ]
+      },
+      "time": 1678080337
+    },
+    {
+      "id": 10000039,
+      "rarity": 4,
+      "name": "迪奥娜",
+      "slogan": "猫尾特调",
+      "element": "冰",
+      "cons": 1,
+      "fetter": 10,
+      "level": 80,
+      "icon": "UI_AvatarIcon_Diona",
+      "gachaAvatarImg": "UI_Gacha_AvatarImg_Diona",
+      "baseProp": {
+        "生命值": 8907.162109375,
+        "攻击力": 762.4715576171875,
+        "防御力": 559.023193359375
+      },
+      "fightProp": {
+        "生命值": 20315.396484375,
+        "攻击力": 1733.3084398312203,
+        "防御力": 769.4901733398438,
+        "暴击率": 8.500000089406967,
+        "暴击伤害": 81.08999729156494,
+        "治疗加成": 0,
+        "元素精通": 20.979999542236328,
+        "元素充能效率": 233.5968255996704,
+        "物理伤害加成": 0,
+        "火元素伤害加成": 0,
+        "水元素伤害加成": 0,
+        "风元素伤害加成": 0,
+        "雷元素伤害加成": 0,
+        "草元素伤害加成": 0,
+        "冰元素伤害加成": 23.999999463558197,
+        "岩元素伤害加成": 0
+      },
+      "skills": {
+        "a": {
+          "style": "",
+          "icon": "Skill_A_02",
+          "level": 1,
+          "originLvl": 1
+        },
+        "e": {
+          "style": "",
+          "icon": "Skill_S_Diona_01",
+          "level": 9,
+          "originLvl": 9
+        },
+        "q": {
+          "style": "",
+          "icon": "Skill_E_Diona_01",
+          "level": 8,
+          "originLvl": 8
+        }
+      },
+      "consts": [
+        {
+          "style": "",
+          "icon": "UI_Talent_S_Diona_01"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Diona_02"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_U_Diona_01"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Diona_03"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_U_Diona_02"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Diona_04"
+        }
+      ],
+      "weapon": {
+        "id": 15403,
+        "rarity": 4,
+        "name": "祭礼弓",
+        "affix": 3,
+        "level": 90,
+        "icon": "UI_EquipIcon_Bow_Fossil",
+        "main": 565,
+        "sub": {
+          "prop": "元素充能效率",
+          "value": "30.6%"
+        }
+      },
+      "relics": [
+        {
+          "pos": 1,
+          "rarity": 5,
+          "name": "宗室之花",
+          "setName": "昔日宗室之仪",
+          "level": 20,
+          "main": {
+            "prop": "生命值",
+            "value": "4780"
+          },
+          "sub": [
+            {
+              "prop": "攻击力",
+              "value": "19"
+            },
+            {
+              "prop": "充能效率",
+              "value": "28.5%"
+            },
+            {
+              "prop": "攻击力",
+              "value": "9.9%"
+            },
+            {
+              "prop": "防御力",
+              "value": "21"
+            }
+          ],
+          "calc": {
+            "rank": "SS",
+            "total": 41.9,
+            "nohit": 0,
+            "main": 0.0,
+            "sub": [
+              {
+                "style": "use",
+                "goal": 1.7
+              },
+              {
+                "style": "great",
+                "goal": 30.7
+              },
+              {
+                "style": "use",
+                "goal": 6.6
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              }
+            ],
+            "main_pct": 100,
+            "total_pct": 107.6
+          },
+          "icon": "UI_RelicIcon_15007_4"
+        },
+        {
+          "pos": 2,
+          "rarity": 5,
+          "name": "宗室之翎",
+          "setName": "昔日宗室之仪",
+          "level": 20,
+          "main": {
+            "prop": "攻击力",
+            "value": "311"
+          },
+          "sub": [
+            {
+              "prop": "充能效率",
+              "value": "5.8%"
+            },
+            {
+              "prop": "防御力",
+              "value": "16.8%"
+            },
+            {
+              "prop": "生命值",
+              "value": "508"
+            },
+            {
+              "prop": "暴击伤害",
+              "value": "17.1%"
+            }
+          ],
+          "calc": {
+            "rank": "A",
+            "total": 24.1,
+            "nohit": 2,
+            "main": 0.0,
+            "sub": [
+              {
+                "style": "great",
+                "goal": 6.3
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "great",
+                "goal": 7.6
+              },
+              {
+                "style": "use",
+                "goal": 8.5
+              }
+            ],
+            "main_pct": 100,
+            "total_pct": 107.6
+          },
+          "icon": "UI_RelicIcon_15007_2"
+        },
+        {
+          "pos": 3,
+          "rarity": 5,
+          "name": "渡火者的煎熬",
+          "setName": "渡过烈火的贤人",
+          "level": 20,
+          "main": {
+            "prop": "充能效率",
+            "value": "51.8%"
+          },
+          "sub": [
+            {
+              "prop": "防御力",
+              "value": "13.9%"
+            },
+            {
+              "prop": "生命值",
+              "value": "15.7%"
+            },
+            {
+              "prop": "生命值",
+              "value": "299"
+            },
+            {
+              "prop": "攻击力",
+              "value": "11.7%"
+            }
+          ],
+          "calc": {
+            "rank": "SS",
+            "total": 42.8,
+            "nohit": 1,
+            "main": 14.0,
+            "sub": [
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "great",
+                "goal": 20.9
+              },
+              {
+                "style": "great",
+                "goal": 4.5
+              },
+              {
+                "style": "use",
+                "goal": 7.8
+              }
+            ],
+            "main_pct": 95.0,
+            "total_pct": 95.5
+          },
+          "icon": "UI_RelicIcon_14003_5"
+        },
+        {
+          "pos": 4,
+          "rarity": 5,
+          "name": "宗室银瓮",
+          "setName": "昔日宗室之仪",
+          "level": 20,
+          "main": {
+            "prop": "生命值",
+            "value": "46.6%"
+          },
+          "sub": [
+            {
+              "prop": "暴击率",
+              "value": "3.5%"
+            },
+            {
+              "prop": "生命值",
+              "value": "269"
+            },
+            {
+              "prop": "防御力",
+              "value": "19"
+            },
+            {
+              "prop": "攻击力",
+              "value": "88"
+            }
+          ],
+          "calc": {
+            "rank": "A",
+            "total": 26.4,
+            "nohit": 0,
+            "main": 15.5,
+            "sub": [
+              {
+                "style": "use",
+                "goal": 3.5
+              },
+              {
+                "style": "great",
+                "goal": 4.0
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "use",
+                "goal": 7.7
+              }
+            ],
+            "main_pct": 100.0,
+            "total_pct": 85.8
+          },
+          "icon": "UI_RelicIcon_15007_1"
+        },
+        {
+          "pos": 5,
+          "rarity": 5,
+          "name": "宗室面具",
+          "setName": "昔日宗室之仪",
+          "level": 20,
+          "main": {
+            "prop": "攻击力",
+            "value": "46.6%"
+          },
+          "sub": [
+            {
+              "prop": "攻击力",
+              "value": "33"
+            },
+            {
+              "prop": "充能效率",
+              "value": "16.8%"
+            },
+            {
+              "prop": "暴击伤害",
+              "value": "14%"
+            },
+            {
+              "prop": "元素精通",
+              "value": "21"
+            }
+          ],
+          "calc": {
+            "rank": "B",
+            "total": 23.0,
+            "nohit": 1,
+            "main": 7.8,
+            "sub": [
+              {
+                "style": "use",
+                "goal": 2.9
+              },
+              {
+                "style": "great",
+                "goal": 18.1
+              },
+              {
+                "style": "use",
+                "goal": 7.0
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              }
+            ],
+            "main_pct": 75.0,
+            "total_pct": 85.8
+          },
+          "icon": "UI_RelicIcon_15007_3"
+        }
+      ],
+      "relicSet": {
+        "昔日宗室之仪": 4,
+        "渡过烈火的贤人": 1
+      },
+      "relicCalc": {
+        "rank": "S",
+        "total": 158.2
+      },
+      "damage": {
+        "level": "C",
+        "data": [
+          [
+            "长按E护盾量",
+            "-",
+            "6803"
+          ],
+          [
+            "Q每跳治疗量",
+            "-",
+            "2697"
+          ]
+        ],
+        "buff": [
+          [
+            "宗室2效果",
+            "元素爆发造成伤害提升20%"
+          ],
+          [
+            "昔日4效果",
+            "开Q后全队攻击力提升152(20%攻击力)"
+          ]
+        ]
+      },
+      "time": 1678080337
+    },
+    {
+      "id": 10000053,
+      "rarity": 4,
+      "name": "早柚",
+      "slogan": "忍里之貉",
+      "element": "风",
+      "cons": 6,
+      "fetter": 10,
+      "level": 20,
+      "icon": "UI_AvatarIcon_Sayu",
+      "gachaAvatarImg": "UI_Gacha_AvatarImg_Sayu",
+      "baseProp": {
+        "生命值": 3295.664794921875,
+        "攻击力": 108.9775390625,
+        "防御力": 207.029296875
+      },
+      "fightProp": {
+        "生命值": 4614.37255859375,
+        "攻击力": 263.97830678883474,
+        "防御力": 285.71929931640625,
+        "暴击率": 18.609999120235443,
+        "暴击伤害": 57.77000188827515,
+        "治疗加成": 5.400000140070915,
+        "元素精通": 34.970001220703125,
+        "元素充能效率": 134.05330181121826,
+        "物理伤害加成": 0,
+        "火元素伤害加成": 0,
+        "水元素伤害加成": 0,
+        "风元素伤害加成": 15.000000596046448,
+        "雷元素伤害加成": 0,
+        "草元素伤害加成": 0,
+        "冰元素伤害加成": 0,
+        "岩元素伤害加成": 0
+      },
+      "skills": {
+        "a": {
+          "style": "",
+          "icon": "Skill_A_04",
+          "level": 1,
+          "originLvl": 1
+        },
+        "e": {
+          "style": "extra",
+          "icon": "Skill_S_Sayu_01",
+          "level": 4,
+          "originLvl": 1
+        },
+        "q": {
+          "style": "extra",
+          "icon": "Skill_E_Sayu_01",
+          "level": 4,
+          "originLvl": 1
+        }
+      },
+      "consts": [
+        {
+          "style": "",
+          "icon": "UI_Talent_S_Sayu_01"
+        },
+        {
+          "style": "",
+          "icon": "UI_Talent_S_Sayu_02"
+        },
+        {
+          "style": "",
+          "icon": "UI_Talent_U_Sayu_02"
+        },
+        {
+          "style": "",
+          "icon": "UI_Talent_S_Sayu_03"
+        },
+        {
+          "style": "",
+          "icon": "UI_Talent_U_Sayu_01"
+        },
+        {
+          "style": "",
+          "icon": "UI_Talent_S_Sayu_04"
+        }
+      ],
+      "weapon": {
+        "id": 12401,
+        "rarity": 4,
+        "name": "西风大剑",
+        "affix": 1,
+        "level": 1,
+        "icon": "UI_EquipIcon_Claymore_Zephyrus",
+        "main": 41,
+        "sub": {
+          "prop": "元素充能效率",
+          "value": "13.3%"
+        }
+      },
+      "relics": [
+        {
+          "pos": 1,
+          "rarity": 5,
+          "name": "野花记忆的绿野",
+          "setName": "翠绿之影",
+          "level": 0,
+          "main": {
+            "prop": "生命值",
+            "value": "717"
+          },
+          "sub": [
+            {
+              "prop": "生命值",
+              "value": "4.7%"
+            },
+            {
+              "prop": "元素精通",
+              "value": "16"
+            },
+            {
+              "prop": "攻击力",
+              "value": "4.7%"
+            },
+            {
+              "prop": "暴击率",
+              "value": "3.1%"
+            }
+          ],
+          "calc": {
+            "rank": "C",
+            "total": 15.7,
+            "nohit": 0,
+            "main": 0.0,
+            "sub": [
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "great",
+                "goal": 5.3
+              },
+              {
+                "style": "use",
+                "goal": 4.7
+              },
+              {
+                "style": "great",
+                "goal": 6.2
+              }
+            ],
+            "main_pct": 100,
+            "total_pct": 97.1
+          },
+          "icon": "UI_RelicIcon_15002_4"
+        },
+        {
+          "pos": 2,
+          "rarity": 5,
+          "name": "猎人青翠的箭羽",
+          "setName": "翠绿之影",
+          "level": 0,
+          "main": {
+            "prop": "攻击力",
+            "value": "47"
+          },
+          "sub": [
+            {
+              "prop": "充能效率",
+              "value": "5.8%"
+            },
+            {
+              "prop": "暴击率",
+              "value": "3.9%"
+            },
+            {
+              "prop": "暴击伤害",
+              "value": "7.8%"
+            }
+          ],
+          "calc": {
+            "rank": "B",
+            "total": 18.8,
+            "nohit": 0,
+            "main": 0.0,
+            "sub": [
+              {
+                "style": "use",
+                "goal": 3.8
+              },
+              {
+                "style": "great",
+                "goal": 7.8
+              },
+              {
+                "style": "great",
+                "goal": 7.8
+              }
+            ],
+            "main_pct": 100,
+            "total_pct": 97.1
+          },
+          "icon": "UI_RelicIcon_15002_2"
+        },
+        {
+          "pos": 3,
+          "rarity": 5,
+          "name": "翠绿猎人的笃定",
+          "setName": "翠绿之影",
+          "level": 19,
+          "main": {
+            "prop": "攻击力",
+            "value": "44.6%"
+          },
+          "sub": [
+            {
+              "prop": "充能效率",
+              "value": "10.4%"
+            },
+            {
+              "prop": "攻击力",
+              "value": "16"
+            },
+            {
+              "prop": "暴击率",
+              "value": "6.6%"
+            },
+            {
+              "prop": "防御力",
+              "value": "37"
+            }
+          ],
+          "calc": {
+            "rank": "S",
+            "total": 32.5,
+            "nohit": 2,
+            "main": 11.1,
+            "sub": [
+              {
+                "style": "use",
+                "goal": 6.9
+              },
+              {
+                "style": "use",
+                "goal": 14.7
+              },
+              {
+                "style": "great",
+                "goal": 13.2
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              }
+            ],
+            "main_pct": 85.9,
+            "total_pct": 82.5
+          },
+          "icon": "UI_RelicIcon_15002_5"
+        },
+        {
+          "pos": 4,
+          "rarity": 5,
+          "name": "翠绿猎人的容器",
+          "setName": "翠绿之影",
+          "level": 0,
+          "main": {
+            "prop": "攻击力",
+            "value": "7%"
+          },
+          "sub": [
+            {
+              "prop": "攻击力",
+              "value": "18"
+            },
+            {
+              "prop": "元素精通",
+              "value": "19"
+            },
+            {
+              "prop": "防御力",
+              "value": "21"
+            },
+            {
+              "prop": "生命值",
+              "value": "209"
+            }
+          ],
+          "calc": {
+            "rank": "C",
+            "total": 10.8,
+            "nohit": 0,
+            "main": 1.7,
+            "sub": [
+              {
+                "style": "use",
+                "goal": 16.5
+              },
+              {
+                "style": "great",
+                "goal": 6.3
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              }
+            ],
+            "main_pct": 55.6,
+            "total_pct": 79.0
+          },
+          "icon": "UI_RelicIcon_15002_1"
+        },
+        {
+          "pos": 5,
+          "rarity": 5,
+          "name": "沙王的投影",
+          "setName": "饰金之梦",
+          "level": 0,
+          "main": {
+            "prop": "治疗加成",
+            "value": "5.4%"
+          },
+          "sub": [
+            {
+              "prop": "攻击力",
+              "value": "14"
+            },
+            {
+              "prop": "生命值",
+              "value": "239"
+            },
+            {
+              "prop": "防御力",
+              "value": "21"
+            },
+            {
+              "prop": "充能效率",
+              "value": "4.5%"
+            }
+          ],
+          "calc": {
+            "rank": "D",
+            "total": 8.6,
+            "nohit": 0,
+            "main": 2.3,
+            "sub": [
+              {
+                "style": "use",
+                "goal": 12.8
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "unuse",
+                "goal": 0.0
+              },
+              {
+                "style": "use",
+                "goal": 3.0
+              }
+            ],
+            "main_pct": 57.5,
+            "total_pct": 82.5
+          },
+          "icon": "UI_RelicIcon_15026_3"
+        }
+      ],
+      "relicSet": {
+        "翠绿之影": 4,
+        "饰金之梦": 1
+      },
+      "relicCalc": {
+        "rank": "B",
+        "total": 86.4
+      },
+      "damage": {
+        "level": "D",
+        "data": [
+          [
+            "扩散反应伤害",
+            "-",
+            "104"
+          ],
+          [
+            "Q不倒貉貉每段治疗量",
+            "-",
+            "1086"
+          ]
+        ],
+        "buff": [
+          [
+            "翠绿4效果",
+            "扩散反应伤害提升60%"
+          ],
+          [
+            "翠绿4效果",
+            "扩散后敌人对应抗性减少40%"
+          ],
+          [
+            "早柚6命",
+            "Q治疗量提升105(元素精通x3)"
+          ],
+          [
+            "精通加成",
+            "扩散反应伤害提升27.5%"
+          ]
+        ]
+      },
+      "time": 1678080337
+    },
+    {
+      "id": 10000068,
+      "rarity": 4,
+      "name": "多莉",
+      "slogan": "梦园藏金",
+      "element": "雷",
+      "cons": 0,
+      "fetter": 4,
+      "level": 20,
+      "icon": "UI_AvatarIcon_Dori",
+      "gachaAvatarImg": "UI_Gacha_AvatarImg_Dori",
+      "baseProp": {
+        "生命值": 3446.842041015625,
+        "攻击力": 104.40618133544922,
+        "防御力": 201.14669799804688
+      },
+      "fightProp": {
+        "生命值": 3757.057861328125,
+        "攻击力": 104.40618133544922,
+        "防御力": 201.14669799804688,
+        "暴击率": 5.000000074505806,
+        "暴击伤害": 50.0,
+        "治疗加成": 0,
+        "元素精通": 0,
+        "元素充能效率": 100,
+        "物理伤害加成": 0,
+        "火元素伤害加成": 0,
+        "水元素伤害加成": 0,
+        "风元素伤害加成": 0,
+        "雷元素伤害加成": 0,
+        "草元素伤害加成": 0,
+        "冰元素伤害加成": 0,
+        "岩元素伤害加成": 0
+      },
+      "skills": {
+        "a": {
+          "style": "",
+          "icon": "Skill_A_04",
+          "level": 1,
+          "originLvl": 1
+        },
+        "e": {
+          "style": "",
+          "icon": "Skill_S_Dori_01",
+          "level": 1,
+          "originLvl": 1
+        },
+        "q": {
+          "style": "",
+          "icon": "Skill_E_Dori_01",
+          "level": 1,
+          "originLvl": 1
+        }
+      },
+      "consts": [
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Dori_01"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Dori_02"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_U_Dori_02"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Dori_03"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_U_Dori_01"
+        },
+        {
+          "style": "off",
+          "icon": "UI_Talent_S_Dori_04"
+        }
+      ],
+      "weapon": {
+        "id": 12402,
+        "rarity": 4,
+        "name": "钟剑",
+        "affix": 1,
+        "level": 1,
+        "icon": "UI_EquipIcon_Claymore_Troupe",
+        "main": 42,
+        "sub": {
+          "prop": "生命值",
+          "value": "9%"
+        }
+      },
+      "relics": [],
+      "relicSet": {},
+      "relicCalc": {
+        "rank": "NaN",
+        "total": 0.0
+      },
+      "damage": {
+        "level": "D",
+        "data": [
+          [
+            "E技能总伤害",
+            "149",
+            "102"
+          ],
+          [
+            "Q每段治疗量",
+            "-",
+            "893"
+          ]
+        ],
+        "buff": [
+          [
+            "钟剑被动",
+            "处于护盾下造成伤害提高12%"
+          ]
+        ]
+      },
+      "time": 1678080337
+    }
+  ],
+  "next": 1678080397
+}
