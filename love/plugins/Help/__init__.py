@@ -61,7 +61,7 @@ Study = on_fullmatch('LOVE教学', priority=50)
 @Study.handle()
 async def handle_func(bot: Bot, event: Event):
 
-    message ="请@LOVE酱 以 【@LOVE酱 教学-你发送的词=回复词】 的格式进行教学哦！"
+    message ="请@LOVE酱 以 【@LOVE酱 教学-你发送的词=回复词】 的格式进行教学哦！(如果提交错误，请 @LOVE酱 撤回-教学词 的形式进行撤回 ，或者重新进行教学)"
 
     await Study.finish(message)
 

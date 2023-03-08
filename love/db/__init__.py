@@ -9,13 +9,13 @@ import time
 curPath = str(os.path.abspath(os.path.pardir) + "/LOVE/love/data/LoveLexicon/").replace('db/', '')
 curPathTwo = str(os.path.abspath(os.path.pardir) + "/LOVE/love/data/Examine/").replace('db/', '')
 
-
 '''初始化数组'''
 
-
-List = ['[空位]','[空位]','[空位]','[空位]','[空位]','[空位]','[空位]','[空位]','[空位]','[空位]']
-ListTWO = ['[空位]','[空位]','[空位]','[空位]','[空位]','[空位]','[空位]','[空位]','[空位]','[空位]']
+List = ['[空位]', '[空位]', '[空位]', '[空位]', '[空位]', '[空位]', '[空位]', '[空位]', '[空位]', '[空位]']
+ListTWO = ['[空位]', '[空位]', '[空位]', '[空位]', '[空位]', '[空位]', '[空位]', '[空位]', '[空位]', '[空位]']
 Number = 0
+
+
 class JsonDB():
     def __init__(self, QQ, send, Reply):
         self.QQ = QQ
@@ -47,6 +47,22 @@ class JsonDB():
         except:
             return "LOVE酱现在还听不懂哦~可以教我吗？"
 
+    def recall(self):
+
+        try:
+            # 从JSON文件中读取数据并解码为Python对象
+            with open(f"{curPathTwo + self.send}.json", "r") as json_file:
+                data = json.load(json_file)
+
+            if self.QQ == data['教学人']:
+                os.remove(curPathTwo + self.send+'.json')
+                return '已成功撤回词汇'
+            else:
+                return '您并不是这个词汇的教学人哦~'
+        except:
+
+            return '您并没有提交过这个词汇哦~'
+
     def ExamineLoad(self):
         """读取待审核文件夹内的文件名"""
         with open(f"{curPathTwo + self.send}", "r") as json_file:
@@ -68,44 +84,44 @@ class JsonDB():
 
     def TeamGroup(self):
         '''写入战队群储存文件的方法'''
-        with open(f"{os.getcwd() + '/love/data/Group/' + 'TeamGroup.txt'}", "a",encoding='gbk') as file:
+        with open(f"{os.getcwd() + '/love/data/Group/' + 'TeamGroup.txt'}", "a", encoding='gbk') as file:
             file.write(f"{self.send}\n")
 
     def TeamCheck(self):
-        with open(f"{os.getcwd() + '/love/data/Group/' + 'TeamGroup.txt'}", "r",encoding='gbk') as file:
+        with open(f"{os.getcwd() + '/love/data/Group/' + 'TeamGroup.txt'}", "r", encoding='gbk') as file:
             return file.read()
 
     def MODGroup(self):
 
-        with open(f"{os.getcwd() + '/love/data/Group/' + 'MODGroup.txt'}", "a",encoding='gbk') as file:
+        with open(f"{os.getcwd() + '/love/data/Group/' + 'MODGroup.txt'}", "a", encoding='gbk') as file:
             file.write(f"{self.send}\n")
 
     def MODCheck(self):
-        with open(f"{os.getcwd() + '/love/data/Group/' + 'MODGroup.txt'}", "r",encoding='gbk') as file:
+        with open(f"{os.getcwd() + '/love/data/Group/' + 'MODGroup.txt'}", "r", encoding='gbk') as file:
             return file.read()
 
     def ArderGruop(self):
-        with open(f"{os.getcwd() + '/love/data/Group/' + 'ArderGroup.txt'}", "a",encoding='gbk') as file:
+        with open(f"{os.getcwd() + '/love/data/Group/' + 'ArderGroup.txt'}", "a", encoding='gbk') as file:
             file.write(f"{self.send}\n")
 
     def ArderCheck(self):
-        with open(f"{os.getcwd() + '/love/data/Group/' + 'ArderGroup.txt'}", "r",encoding='gbk') as file:
+        with open(f"{os.getcwd() + '/love/data/Group/' + 'ArderGroup.txt'}", "r", encoding='gbk') as file:
             return file.read()
 
     def MatchGrop(self):
-        with open(f"{os.getcwd() + '/love/data/Group/' + 'MatchGroup.txt'}", "a",encoding='gbk') as file:
+        with open(f"{os.getcwd() + '/love/data/Group/' + 'MatchGroup.txt'}", "a", encoding='gbk') as file:
             file.write(f"{self.send}\n")
 
     def MatchCheck(self):
-        with open(f"{os.getcwd() + '/love/data/Group/' + 'MatchGroup.txt'}", "r",encoding='gbk') as file:
+        with open(f"{os.getcwd() + '/love/data/Group/' + 'MatchGroup.txt'}", "r", encoding='gbk') as file:
             return file.read()
 
     def TechnologyGrop(self):
-        with open(f"{os.getcwd() + '/love/data/Group/' + 'TechnologyGroup.txt'}", "a",encoding='gbk') as file:
+        with open(f"{os.getcwd() + '/love/data/Group/' + 'TechnologyGroup.txt'}", "a", encoding='gbk') as file:
             file.write(f"{self.send}\n")
 
     def TechnologyCheck(self):
-        with open(f"{os.getcwd() + '/love/data/Group/' + 'TechnologyGroup.txt'}", "r",encoding='gbk') as file:
+        with open(f"{os.getcwd() + '/love/data/Group/' + 'TechnologyGroup.txt'}", "r", encoding='gbk') as file:
             return file.read()
 
     def LoadText(self):
@@ -143,7 +159,6 @@ class JsonDB():
         try:
             with open(f"{os.getcwd() + '/love/data/Advertisement/' + f'{self.QQ}.txt'}", "r") as file:
 
-
                 return datetime.strptime(file.read(), "%Y-%m-%d %H:%M:%S.%f")
 
         except:
@@ -152,12 +167,11 @@ class JsonDB():
     def Advertisement(self):
         """实现了公告栏的方法"""
         now = datetime.now()
-        #写入时间
+        # 写入时间
         cdtime = now.strftime("%Y-%m-%d %H:%M:%S.%f")
 
         with open(f"{os.getcwd() + '/love/data/Advertisement/' + f'{self.QQ}.txt'}", "w") as file:
             file.write(cdtime)
-
 
         with open(f"{os.getcwd() + '/love/data/Advertisement/' + 'log.txt'}", "a") as file:
             file.write(f"QQ:\t{self.send}\n")
@@ -183,12 +197,11 @@ class JsonDB():
     def AdvertisementTWO(self):
         """实现了公告栏的方法"""
         now = datetime.now()
-        #写入时间
+        # 写入时间
         cdtime = now.strftime("%Y-%m-%d %H:%M:%S.%f")
 
         with open(f"{os.getcwd() + '/love/data/Advertisement/' + f'{self.QQ}.txt'}", "w") as file:
             file.write(cdtime)
-
 
         with open(f"{os.getcwd() + '/love/data/Advertisement/' + 'log.txt'}", "a") as file:
             file.write(f"QQ:\t{self.send}\n")
@@ -212,12 +225,11 @@ class JsonDB():
         return "告示栏已满！"
 
     def CheckAdvertisement(self):
-        if self.send!='Two':
+        if self.send != 'Two':
             global List
-            Check=''
+            Check = ''
             for i in List:
-
-                Check+=i+'\n'
+                Check += i + '\n'
 
             return Check
         else:
@@ -228,7 +240,6 @@ class JsonDB():
 
             return Check
 
-
     def Config(self):
 
         with open(f"{os.path.abspath(os.path.pardir)}/LOVE/Config.json") as json_file:
@@ -237,24 +248,20 @@ class JsonDB():
 
 
 class Clean():
-    def __init__(self,i):
+    def __init__(self, i):
         self.i = i
         '''愚蠢的实现方法'''
-    def Clean(self,i):
 
+    def Clean(self, i):
         time.sleep(600)
         global List
-        List[self.i]='[空位]'
+        List[self.i] = '[空位]'
 
         return "该告示将在十分钟后自动删除.."
-
 
     def CleanTWO(self):
-
         time.sleep(600)
         global ListTWO
-        ListTWO[Number]='[空位]'
+        ListTWO[Number] = '[空位]'
 
         return "该告示将在十分钟后自动删除.."
-
-
