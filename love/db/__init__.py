@@ -156,6 +156,7 @@ class JsonDB():
                 return Text.LoadText()
 
     def AdvertisementTime(self):
+        '''读取之前保存的时间'''
         try:
             with open(f"{os.getcwd() + '/love/data/Advertisement/' + f'{self.QQ}.txt'}", "r") as file:
 
@@ -163,6 +164,29 @@ class JsonDB():
 
         except:
             return 0
+    def idioctoniaTime(self):
+        '''读取文件内的时间 如果没有则返回0'''
+
+        try:
+            with open(f"{os.getcwd() + '/love/data/TimeData/hatred/' + f'{self.QQ}.txt'}", "r") as file:
+
+                return datetime.strptime(file.read(), "%Y-%m-%d %H:%M:%S.%f")
+
+        except:
+            return 0
+
+    def idioctonia(self):
+        now = datetime.now()
+        cdtime = now.strftime("%Y-%m-%d %H:%M:%S.%f")
+
+        #第一次使用写入时间
+
+        with open(f"{os.getcwd() + '/love/data/TimeData/hatred/' + f'{self.QQ}.txt'}", "w") as file:
+            file.write(cdtime)
+
+        Text = '似了'
+        return Text
+
 
     def Advertisement(self):
         """实现了公告栏的方法"""
@@ -264,4 +288,9 @@ class Clean():
         global ListTWO
         ListTWO[Number] = '[空位]'
 
-        return "该告示将在十分钟后自动删除.."
+    def Cleanall(self):
+
+        global List
+        List= ['[空位]', '[空位]', '[空位]', '[空位]', '[空位]', '[空位]', '[空位]', '[空位]', '[空位]', '[空位]']
+
+        return "哦删完事了"

@@ -235,8 +235,7 @@ async def handle_func(bot: Bot, event: Event):
     await MODCourse.send(message.Course())
 
 
-Advertisement = on_command("查看告示栏")
-
+Advertisement = on_command(("查看告示栏"), aliases={('有人吗', '有人吗？'), '有房吗', ('有房吗？', '有人吗?', "有房吗?")})
 
 
 @Advertisement.handle()
@@ -245,8 +244,8 @@ async def handle_func(bot: Bot, event: Event):
 
     await Advertisement.send(masssage.CheckAdvertisement())
 
-Advertisement = on_command("查看告示栏2")
 
+Advertisement = on_command("查看告示栏2")
 
 
 @Advertisement.handle()
@@ -262,11 +261,16 @@ UpdateAdvertisement = on_command("提交告示-")
 @UpdateAdvertisement.handle()
 async def handle_func(bot: Bot, event: Event):
     QQ = event.get_session_id().split('_')[2]
+    message = str(event.get_message()).split('-')[1]  # 事件消息内容
+
+    if len(message) > 30:
+        await UpdateAdvertisement.finish('请不要提交过长的消息哦！')
+
     if QQ == "黑名单用户":
 
-        await UpdateAdvertisement.send("你已被拉黑。")
+        await UpdateAdvertisement.finish("你已被拉黑。")
     else:
-        message = str(event.get_message()).split('-')[1]  # 事件消息内容
+
         send = message
         TMD = JsonDB(QQ=QQ, send=send, Reply='')
 
@@ -281,6 +285,13 @@ async def handle_func(bot: Bot, event: Event):
             interval = 180
             # 若过去了180s则允许
         if interval >= 180:
+            wfole = Clean(i=Number)
+            # 创建新线程
+            thread = threading.Thread(target=wfole.Clean)
+            # 设置为后台运行，程序不会阻塞
+            thread.daemon = True
+            # 启动线程
+            thread.start()
 
             await UpdateAdvertisement.send(TMD.Advertisement())
         else:
@@ -288,19 +299,25 @@ async def handle_func(bot: Bot, event: Event):
             await UpdateAdvertisement.send(f"你在{180 - interval}s后才可再次提交哦~")
 
 
-@UpdateAdvertisement.handle()
-async def handle_func(bot: Bot, event: Event):
-    message = str(event.get_message()).split('-')[1]  # 事件消息内容
-    send = message
-    TMD = Clean(i=Number)
-    # 创建新线程
-    thread = threading.Thread(target=TMD.Clean)
-    # 设置为后台运行，程序不会阻塞
-    thread.daemon = True
-    # 启动线程
-    thread.start()
+delete = on_command("清空告示栏")
 
-    await UpdateAdvertisement.send('')
+
+@delete.handle()
+async def handle_func(bot: Bot, event: Event):
+    QQ = event.get_session_id().split('_')[2]
+
+    if int(QQ) == 3345483363 or int(QQ) == 2060598058:
+
+        a = Clean(i='')
+
+        a.Cleanall()
+
+        await delete.send("成功！")
+
+    else:
+
+        await delete.send(f"QQ为：{QQ}的用户没有权限！")
+
 
 '''暂未解决程序堵塞问题'''
 '''暂时不使用告示栏2'''

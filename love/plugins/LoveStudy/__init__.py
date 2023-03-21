@@ -2,9 +2,10 @@ import os
 import random
 from nonebot.adapters.onebot.v11 import Event
 from nonebot.adapters.onebot.v11.bot import Bot
-from nonebot.plugin.on import on_command
+from nonebot.plugin.on import on_command, on_keyword
 from nonebot.rule import to_me
 from love.db import JsonDB
+from datetime import datetime
 
 """本模块主要实现LOVE酱的学习功能"""
 
@@ -24,17 +25,93 @@ async def handle_func(bot: Bot, event: Event):
     await study.send('教学成功！(请等待主人审核哦~)')
 
 
+attack = on_keyword({'泥马','傻逼','操你妈','你妈','脑瘫','煞笔', '纱布', '草泥马', '傻必', '傻碧', '傻臂', '傻弊', '沙比', '傻笔', '傻鸟'}, to_me())
+
+@attack.handle()
+async def handle_func(bot: Bot, event: Event):
+
+
+    TextList = ['超你麻麻', '你麻麻似了', '我超你麻麻', '你是不是吃屎了阿嘴怎么这么臭',
+                '你是刚从花粉迟里出来嘛怎么这么恶心', '你怎么跟依托市一样恶心', '别恶心我好嘛', '滚滚滚', '超你嘛',
+                '你个钩砸中快滚', '煞笔', '好煞笔快滚', '你怎么不说话了是在给你麻麻哭坟吗', '哪来的dinner',
+                '别在这里发电快滚', '好弱治', '你麻麻霹雳有两条四幅麻将']
+
+    rnd3 = random.Random()
+    x = rnd3.randint(0, len(TextList) - 1)
+
+    QQ = event.get_session_id().split('_')[2]
+    message = event.get_message()
+
+    Load = JsonDB(QQ=QQ, Reply='', send=message)
+
+
+    try:
+        nowtime = datetime.now()
+        cdtime = Load.idioctoniaTime()
+
+        duration = nowtime - cdtime
+        # 现在时间-cd时间
+
+        interval = duration.seconds
+        Load.idioctonia()
+        if interval >= 600:
+
+            await attack.send(TextList[x] + '\n（检测到侮辱性词汇，将对你关闭十分钟聊天系统）')
+        else:
+
+            await attack.send('')
+    except:
+        Load.idioctonia()
+        await attack.send(TextList[x] + '\n（检测到侮辱性词汇，将对你关闭十分钟聊天系统）')
+
+
 """实现被艾特时回话功能"""
 Reply = on_command(cmd='', rule=to_me(), priority=60)
 
 
 @Reply.handle()
 async def handle_func(bot: Bot, event: Event):
+    QQ = event.get_session_id().split('_')[2]
+    message = event.get_message()
+
+    Load = JsonDB(QQ=QQ, Reply='', send=message)
+
     if len(str(event.get_message())) >= 1:
 
-        Load = JsonDB(QQ='', Reply='', send=event.get_message())
+        try:
+            nowtime = datetime.now()
+            cdtime = Load.idioctoniaTime()
 
-        await Reply.send(Load.Load())
+            duration = nowtime - cdtime
+            # 现在时间-cd时间
+
+            interval = duration.seconds
+
+            # 记仇功能
+
+            if str(event.get_message()) == '紫砂' and Load.idioctoniaTime() == 0:
+                # 如果是紫砂就这么来一套
+                await Reply.send(Load.idioctonia())
+                # 但是也要检测一下时间
+            elif interval >= 600:
+                # 这里开始判断时间
+                # 获取紫砂时间与现在时间的差值
+                if '紫砂' in str(event.get_message()):
+                    # 如果是紫砂就这么来一套
+                    await Reply.send(Load.idioctonia())
+                else:
+                    await Reply.send(Load.Load())
+
+            else:
+                # 装死
+                await Reply.send('')
+        except:
+            if '紫砂' in str(event.get_message()):
+                # 如果是紫砂就这么来一套
+                await Reply.send(Load.idioctonia())
+            else:
+                await Reply.send(Load.Load())
+
 
     else:
         message = ["你好，这里是LOVE酱，发送 帮助 可以查看我的功能哦！",
@@ -43,7 +120,7 @@ async def handle_func(bot: Bot, event: Event):
         rnd = random.Random()
         Num = rnd.randint(0, 2)
 
-        await  Reply.send(message[Num])
+        await Reply.send(message[Num])
 
 
 # 让人可以撤回自己还没有过审的词汇
