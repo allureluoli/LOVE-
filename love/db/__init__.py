@@ -175,6 +175,22 @@ class JsonDB():
         except:
             return 0
 
+    def ChatOS(self):
+        try:
+
+            if self.Reply=='start':
+
+                with open(f"{os.getcwd() + '/love/data/ChatData/' + f'{self.QQ}.txt'}", "w") as file:
+                    file.write(self.QQ)
+
+            elif self.Reply == 'find':
+                with open(f"{os.getcwd() + '/love/data/ChatData/' + f'{self.QQ}.txt'}", "r", encoding='gbk') as file:
+                    return file.read()
+            else:
+                 os.remove(f"{os.getcwd() + '/love/data/ChatData/' + f'{self.QQ}.txt'}")
+
+        except:
+            return 0
     def idioctonia(self):
         now = datetime.now()
         cdtime = now.strftime("%Y-%m-%d %H:%M:%S.%f")

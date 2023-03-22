@@ -23,7 +23,8 @@ async def handle_func(bot: Bot, event: Event):
 【单位查询】:【今日抽签】
 【随机地图】:【群聊查询】
 【铁锈教程】:【主人功能】
-【为我发电】:【更多功能】"""
+【为我发电】:【更多功能】
+新增功能：【@LOVE 和我聊天】可以开启持续性会话"""
 
     await Help.finish(message)
 
