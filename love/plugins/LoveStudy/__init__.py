@@ -189,6 +189,13 @@ async def handle_func(bot: Bot, event: Event):
     message = event.get_message()
 
     Load = JsonDB(QQ=QQ, Reply='', send=message)
+    #
+    # if message == '复活' and QQ == 3345483363:
+    #
+    #     Load.revive()
+    #
+    #     await Reply.send("复活成功!LOVE最喜欢你惹~")
+
 
     if len(str(event.get_message())) >= 1:
 

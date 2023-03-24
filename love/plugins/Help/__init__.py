@@ -24,7 +24,8 @@ async def handle_func(bot: Bot, event: Event):
 【随机地图】:【群聊查询】
 【铁锈教程】:【主人功能】
 【为我发电】:【更多功能】
-新增功能：【@LOVE 和我聊天】可以开启持续性会话"""
+新增功能：【@LOVE 和我聊天】可以开启持续性会话
+ps:如需关闭持续性会话请说：不聊了"""
 
     await Help.finish(message)
 
@@ -40,7 +41,8 @@ async def handle_func(bot: Bot, event: Event):
         随机4P图
         随机6P图
         随机8P图
-        随机10P图"""
+        随机10P图
+        psc抽图"""
 
     await MapHelp.finish(message)
 
@@ -79,7 +81,9 @@ async def handle_func(bot: Bot, event: Event):
 ---抓兔机!---
 【战队抓兔机】【铁锈抓兔机】
 ---召唤英灵吧！---
-【英灵召唤】【FGO十连】"""
+【英灵召唤】【FGO十连】
+---比赛专用---
+【比赛抽图模式启动】"""
 
     await MoreHelp.finish(message)
 

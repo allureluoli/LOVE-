@@ -22,6 +22,9 @@ class JsonDB():
         self.send = send
         self.Reply = Reply
 
+    def revive(self):
+        os.remove(os.getcwd() + '/love/data/TimeData/hatred/' + self.QQ+'txt')
+
     def Save(self):
         now = datetime.now()
         data = {

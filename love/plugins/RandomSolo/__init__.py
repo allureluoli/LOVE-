@@ -1,7 +1,7 @@
 import os
 import random
 from pathlib import Path
-from nonebot.adapters.onebot.v11 import Event, MessageSegment
+from nonebot.adapters.onebot.v11 import Event, MessageSegment, Message
 from nonebot.adapters.onebot.v11.bot import Bot
 from nonebot.plugin.on import on_fullmatch, on_command
 
@@ -122,40 +122,22 @@ async def handle_func(bot: Bot, event: Event):
 
     await Random10P.send(f'你抽到的地图为：【{message}】' + image)
 
+Random10P = on_fullmatch(('psc抽图', 'PSC抽图'), priority=50)
 
-# BanMap = on_command('比赛抽图模式启动', aliases={'Ban-', 'ban-', 'Ban图结束', 'ban图结束'}, priority=50)
-#
-#
-# @BanMap.handle()
-# async def handle_func(event: Event):
-#
-#         listFiles = os.listdir(os.getcwd() + "/love/data/images/p8/")
-#         MapN = len(listFiles)
-#
-#         if str(event.get_message()) == 'Ban图结束' or str(event.get_message()) == 'ban图结束':
-#             rnd3 = random.Random()
-#             x = rnd3.randint(0, MapN)
-#
-#             path = Path(os.getcwd() + f"/love/data/images/p10/{listFiles[x]}").parent / f"{listFiles[x]}"
-#
-#             image = MessageSegment.image(path)
-#
-#             message = listFiles[x].replace('.png', '')
-#
-#             await BanMap.finish(f'比赛抽图结束:\t你抽到的地图为：【{message}】' + image)
-#
-#         # 获取文件夹内地图为一个列表
-#         try:
-#             message = str(event.get_message()).split('-')[1]
-#
-#             if message not in listFiles:
-#
-#                 await BanMap.send(f"地图池中没有名为{message}的地图哦~")
-#             else:
-#
-#                 MapN -= 1
-#                 listFiles.remove(message)
-#
-#                 await BanMap.send(f"呐呐,目前地图池为：{listFiles}\n需要Ban图请发送【ban-地图名称】哦~")
-#         except:
-#             await BanMap.send(f"呐呐,目前地图池为：{listFiles}\n需要Ban图请发送【ban-地图名称】哦~")
+
+@Random10P.handle()
+async def handle_func(bot: Bot, event: Event):
+    rnd3 = random.Random()
+    x = rnd3.randint(0, 8)
+    listFiles = os.listdir(os.getcwd() + "/love/data/images/PSC/")
+    #  Pycharm sb 重构
+
+    path = Path(os.getcwd() + f"/love/data/images/PSC/{listFiles[x]}").parent / f"{listFiles[x]}"
+
+    image = MessageSegment.image(path)
+
+    message = listFiles[x].replace('.png', '')
+
+    await Random10P.send(f'你抽到的地图为：【{message}】' + image)
+
+
