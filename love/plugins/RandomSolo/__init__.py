@@ -1,9 +1,9 @@
 import os
 import random
 from pathlib import Path
-from nonebot.adapters.onebot.v11 import Event, MessageSegment, Message
+from nonebot.adapters.onebot.v11 import Event, MessageSegment
 from nonebot.adapters.onebot.v11.bot import Bot
-from nonebot.plugin.on import on_fullmatch, on_command
+from nonebot.plugin.on import on_fullmatch
 
 '''本文件主要实现随机单挑图'''
 
@@ -14,10 +14,10 @@ RandomSolo = on_fullmatch(('随机单挑图', '随机2p图', '随机2P图'), pri
 async def handle_func(bot: Bot, event: Event):
     rnd3 = random.Random()
     x = rnd3.randint(0, 8)
-    listFiles = os.listdir(os.getcwd() + "/love/data/images/")
+    listFiles = os.listdir(os.getcwd() + "/love/data/images/p2/")
     #  Pycharm sb 重构
 
-    path = Path(os.getcwd() + f"/love/data/images/{listFiles[x]}").parent / f"{listFiles[x]}"
+    path = Path(os.getcwd() + f"/love/data/images/p2/{listFiles[x]}").parent / f"{listFiles[x]}"
 
     image = MessageSegment.image(path)
 
