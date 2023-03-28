@@ -66,6 +66,8 @@ async def handle_func(bot: Bot,event: Event):
     #如此，便生成一个事件响应器
 
 
+
+
 ChatWW = on_command(cmd='', priority=60)
 
 
@@ -133,7 +135,7 @@ async def handle_func(bot: Bot, event: Event):
             await ChatWW.send(message[Num])
 
     else:
-        await ChatWW.finish('')
+        await ChatWW.finish(None)
 
 
 
@@ -177,6 +179,22 @@ async def handle_func(bot: Bot, event: Event):
     except:
         Load.idioctonia()
         await attack.send(TextList[x] + '\n（检测到侮辱性词汇，将对你关闭十分钟聊天系统）')
+
+Revive = on_command(cmd='复活', rule=to_me(), priority=60)
+
+
+@Revive.handle()
+async def handle_func(bot: Bot, event: Event):
+        QQ = str(event.get_session_id().split('_')[2])
+
+        if int(QQ) == 1921411270:
+            Load = JsonDB(QQ=QQ, Reply='',send='')
+            Load.revive()
+            await Revive.finish("复活成功，最喜欢你了~")
+        else:
+
+
+            await Revive.finish("你几把谁？")
 
 
 """实现被艾特时回话功能"""

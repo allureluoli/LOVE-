@@ -26,19 +26,18 @@ MapList = os.listdir(os.getcwd() + "/love/data/images/match/")
               prompt=f"当前地图池为{str(MapList).replace('.png', '')}\nBan图指【BanXXX】\nBan图结束请发送【开始抽图】")
 async def handle_func(event: Event):
     # async def handle_city(Map: Message = Arg(), BanMap: str = ArgPlainText("Map")):
-    try:
-        MapName = str(event.get_message()).replace('Ban', '')
 
-        if MapName != '开始抽图':
+    MapName = str(event.get_message()).replace('Ban', '')
 
-            MapList.remove(MapName + '.png')
+    if MapName != '开始抽图':
 
-            await MatchMap.reject("Ban图成功，地图池中还有：" + str(MapList).replace('.png', ''))
+        MapList.remove(MapName + '.png')
 
-        else:
-            await MatchMap.send("Ban图结束，最终地图池中还有：" + str(MapList).replace('.png', '') + "这些地图")
-    except:
-        await MatchMap.reject("请检查指令是否正确~")
+        await MatchMap.reject("Ban图成功，地图池中还有：" + str(MapList).replace('.png', ''))
+
+    else:
+        await MatchMap.send("Ban图结束，最终地图池中还有：" + str(MapList).replace('.png', '') + "这些地图")
+
 
 
 @MatchMap.got("Number", prompt=f"请发送需要抽取地图的数量，如果抽1张图请发送 1 。")
@@ -63,22 +62,3 @@ async def handle_func(event: Event):
             await MatchMap.send("呐呐~你抽到的地图为：" + message.replace('.png', '') + image)
 
     await MatchMap.finish("抽图结束，祝您比赛愉快")
-
-    # except:
-    #
-    #     await MatchMap.reject("地图池中没有这么多张图哦！请输入一个小于" + str(len(MapList)) + "的数字")
-
-    # await MatchMap.send("Ban图结束了，请发送你要抽几张图？")
-    #
-    # if BanMap not in ["两岸", "火山"]:
-    #     await MatchMap.reject(Map.template("地图池中没有【{Map}】这张图哦！"))
-
-#     Ban_Map = await ban_Map(BanMap)
-#
-#     await MatchMap.finish(Ban_Map)
-#
-#
-# async def ban_Map(Map: str) -> str:
-#     return f"你成功ban了{Map}..."
-
-# 这里抽图
