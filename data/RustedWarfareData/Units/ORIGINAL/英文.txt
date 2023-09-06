@@ -1,0 +1,27 @@
+crystal_mid
+mechFlying
+Missing Unit
+system_fogRevealer
+Flare
+zoneMarker
+damagingBorder
+Laboratory
+editorOrBuilder
+Mega Builder
+marker
+bugGenerator
+bugSpore
+bugMeleeSmall
+bugMelee
+bugFly
+bugPickup
+bugRanged
+bugBee
+bugWasp
+bugMeleeLarge
+Generator
+bugRangedT2
+Killer alpha
+bugNest
+bugTurret
+bugExtractor

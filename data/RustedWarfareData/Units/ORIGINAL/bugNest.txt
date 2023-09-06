@@ -1,0 +1,15 @@
+[
+名称::
+bugNest
+建筑占地
+3 * 3
+耐久
+生命值 / 回复
+800 / 6/s
+建造
+建造自
+bugSporebugFly
+造价 / 速度：$600 / 12%/s
+可建造
+bugSporebugFlybugMeleebugRangedbugPickupbugWaspbugBeebugRangedT2
+]

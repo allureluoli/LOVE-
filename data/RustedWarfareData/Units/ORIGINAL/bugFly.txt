@@ -1,0 +1,17 @@
+[
+名称::
+bugFly
+体积
+半径 / 重量
+8 / 500
+耐久
+生命值 / 回复
+160 / 6/s
+移动类型 / 速度：飞行 / 1.4
+建造
+建造自
+bugNest
+造价 / 速度：$400 / 30%/s
+可建造
+bugExtractorbugNestbugGeneratorbugTurret
+]

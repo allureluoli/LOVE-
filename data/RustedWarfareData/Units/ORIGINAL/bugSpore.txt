@@ -1,0 +1,19 @@
+[
+名称::
+bugSpore
+-
+半径 / 重量
+8 / 500
+-
+生命值 / 回复
+160 / 6/s
+-
+移动类型 / 速度：陆地 / 1.4
+-
+建造自
+bugNest
+造价 / 建造速度：$100 / 30%/s
+-
+可建造
+bugExtractorbugNestbugGeneratorbugTurret
+]
