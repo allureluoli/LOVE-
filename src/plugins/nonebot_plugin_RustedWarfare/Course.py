@@ -11,7 +11,7 @@ async def handle_func(event: Event):
     path = os.getcwd() + '/data/RustedWarfareData/Course/' + message
 
     def W(T):
-        with open(path + T) as M:
+        with open(path + T, encoding='utf-8') as M:
             return M.read()
 
     match message:

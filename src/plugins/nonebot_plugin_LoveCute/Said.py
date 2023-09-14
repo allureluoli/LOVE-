@@ -8,24 +8,31 @@ import random
 
 def Said(Text):
     path = os.getcwd() + '/data/LoveCuteData/ChatData/'
-    List = ['日常词汇', '科普词汇', '问答词汇', '娱乐词汇词汇']
+    List = ['日常词汇', '科普词汇', '问答词汇', '娱乐词汇']
 
+    # 准备更新以为了适配新地编号类教学
     for i in List:
         with open(path + 'new-data.json', encoding='utf-8') as f:
             data = json.load(f)
-            try:
-                return data[i][Text]
-            except KeyError:
-                pass
+            for j in range(len(data[i]) + 1):
+                try:
+                    return data[i][f'编号{j}'][Text]
+                except KeyError:
+                    pass
+
     with open(path + 'old-data.json', encoding='utf-8') as f:
         data = json.load(f)
-        try:
-            return data['old'][Text]
-        except KeyError:
-            return '呐？这个词汇没有被教学哦\n发送  词汇教学  进行教学'
+
+        for j in range(len(data['old'])):
+            try:
+                return data['old'][f'编号{j}'][Text]
+            except KeyError:
+                pass
+
+    return '呐？这个词汇没有被教学哦\n发送  词汇教学  进行教学'
 
 
-at = on_command(cmd='', rule=to_me(), priority=50)
+at = on_command(cmd='', rule=to_me(), priority=60)
 """ 被艾特时回复 """
 
 

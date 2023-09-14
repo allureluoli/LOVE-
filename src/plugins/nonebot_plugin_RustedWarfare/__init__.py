@@ -32,7 +32,7 @@ async def handle_func(event: Event):
         case '随机地图':
             message = """---随机地图的指令---\n\t随机单挑图\n\t随机3P图\n\t随机4P图\n\t随机6P图\n\t随机8P图\n\t随机10P图\n\tpsc抽图"""
         case '铁锈教程':
-            message = """ ---【目前仅支持的教程命令】---\n\t【导入教程】\t【房间指令教程】\n\t【联机教程】\n\t【开发教程】"""
+            message = """ ---【目前仅支持的教程命令】---\n\t【导入教程】\n\t【房间指令教程】\n\t【联机教程】\n\t【开发教程】"""
         case '为我发电':
             message = """ ---【你的每一份支持都会成为LOVE酱开发的动力!】---\n【爱发电网址】:"https://afdian.net/a/allureluoli" """
         case '更多功能':   # 没写完的功能 ---模拟骰子功能哦！---\n\t【丢个骰子】\n

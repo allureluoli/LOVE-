@@ -15,7 +15,7 @@ ImageSaid = on_fullmatch(
      '挥手', '摆烂', '敬礼', '晕', '暴力', '杀', '汗', '爽', '看报', '看看', '睡觉', '祝福', '笔记', '耶',
      '苦笑', '茶',
      '萌', '谢谢', '赞', '鄙视', '阿弥陀佛', '雪糕', '震撼', '鼓掌', '为什么', '偷听', '别急', '吃饭', '哈吉米', '哈哈',
-     '学习', '寄', '开车', '怕', '悲', '摇起来', '比心', '水枪', '秀', '笑', '色色', '酷', '乐', '傻', '睿智', '笑',
+     '学习', '寄', '开车', '怕', '悲', '摇起来', '比心', '水枪', '秀', '笑', '色色', '涩涩', '酷', '乐', '傻', '睿智', '笑',
      '寄', '?', '？', '看', '懵', '跳舞', '吃瓜', '看书'),
     priority=50)
 
@@ -32,6 +32,8 @@ async def handle_func(event: Event):
     path = os.getcwd() + '/data/LoveCuteData/CuteImage/'
     Text = str(event.get_message())
     match Text:
+        case '涩涩':
+            Text = '色色'
         case '乐':
             Text = random.choice(['乐-1', '乐-2', '乐-3'])
         case '傻':
@@ -61,6 +63,5 @@ async def handle_func(event: Event):
         image = SaidImage(path + Text + '.jpg')
         await ImageSaid.send(image)
     except FileNotFoundError:
-        await ImageSaid.send(path + Text + '.jpg')
         image = SaidImage(path + Text + '.gif')
         await ImageSaid.send(image)

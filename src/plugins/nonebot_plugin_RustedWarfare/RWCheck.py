@@ -1,6 +1,9 @@
+import asyncio
 import os
+from pathlib import Path
+
 from nonebot import on_command
-from nonebot.adapters.onebot.v11 import Event
+from nonebot.adapters.onebot.v11 import Event, MessageSegment
 
 
 def RWCheck(name):
@@ -17,12 +20,22 @@ async def handle_func(event: Event):
     try:
         Text = str(event.get_message()).split('查询-')[1]
         message = RWCheck(Text)
+        path = os.getcwd() + '/data/RustedWarfareData/Units/'
+        try:
+            with open(path + 'UnitsImage/' + Text + '.jpg', mode='rb') as f:
+                f.read()
 
-        await Check.send(message+'\n 数据源自铁锈战争wiki: https://rustedwarfare.org/')
+            image = MessageSegment.image(cache=True, file=Path(path + 'UnitsImage/' + Text + '.jpg'))
+
+            await Check.send(message+'\n 数据源自铁锈战争wiki: https://rustedwarfare.org/' )
+            await asyncio.sleep(2)
+            await Check.send(image)
+        except FileNotFoundError:
+            await Check.send(message + '\n 数据源自铁锈战争wiki: https://rustedwarfare.org/')
     except FileNotFoundError:
         await Check.send('你输入的单位名无法识别。')
 
-nameList = on_command('查看', priority=50)
+nameList = on_command('查看', priority=60)
 
 
 @nameList.handle()
@@ -44,4 +57,4 @@ async def handle_func(event: Event):
         case '查看特殊单位':
             message = '特殊'
 
-    await nameList.finish(RWCheck(message))
+    await nameList.send(RWCheck(message))

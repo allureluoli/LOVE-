@@ -13,4 +13,4 @@ async def GroupNewMember(bot: Bot, event: GroupIncreaseNoticeEvent):
             MessageSegment.text('大家好！ 这里是LOVE酱哦，希望能和大家愉快相处。\n LOVE酱会好多东西呢！发送help查看吧~~')))
     elif event.get_message != event.self_id:
         await bot.send_group_msg(group_id=event.group_id, message=Message(
-            MessageSegment.at(event.user_id) + MessageSegment.text("欢迎新群友哦~\n")))
+            MessageSegment.at(event.user_id) + MessageSegment.text("欢迎新群友哦~")))

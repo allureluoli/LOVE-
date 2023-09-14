@@ -1,3 +1,4 @@
+import asyncio
 import os
 import random
 from datetime import date
@@ -25,9 +26,19 @@ Rabbit = on_fullmatch('铁锈抓兔机', priority=50)
 @Rabbit.handle()
 async def handle_func():
 
-    path = os.getcwd() + '/data/RustedWarfareData/Units/ORIGINAL/总单位.txt'
-    with open(path, encoding='utf-8') as f:
+    path = os.getcwd() + '/data/RustedWarfareData/Units/'
+    with open(path + 'ORIGINAL/总单位.txt', encoding='utf-8') as f:
         STR = f.read().split('\n')
     rabbit = random.choice(STR)
+    try:
 
-    await Rabbit.finish(f'恭喜你抓到了【{rabbit}】捏,将它抱回家吧！')
+        with open(path + 'UnitsImage/' + rabbit + '.jpg', mode='rb') as f:
+            f.read()
+
+        image = MessageSegment.image(Path(path + 'UnitsImage/' + rabbit + '.jpg'))
+
+        await Rabbit.send(f'恭喜你抓到了【{rabbit}】捏,将它抱回家吧！')
+        await asyncio.sleep(2)
+        await Rabbit.send(image)
+    except FileNotFoundError:
+        await Rabbit.send(f'恭喜你抓到了【{rabbit}】捏,将它抱回家吧！')
